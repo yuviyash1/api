@@ -1,4 +1,31 @@
 // DISHA Recruitment — shared interactions
+(function() {
+    // 1. Inject your CSS code dynamically
+    const cssStyles = `
+    :root {
+        --navy: #0c1f4d;
+        --navy-light: #16275e;
+        --orange: #f4631e;
+        --orange-dark: #e0501a;
+        --bg-grey: #f5f6f8;
+        --line: #e7e9ee;
+        --text-dark: #16275e;
+        --text-body: #4b5468;
+        --white: #ffffff;
+        --radius: 10px;
+        --shadow: 0 4px 18px rgba(12,31,77,0.08);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { font-family: 'Inter', sans-serif; color:var(--text-body); background:var(--white); }
+    /* ... Paste the rest of your style.css rules here ... */
+    `;
+
+    const styleTag = document.createElement("style");
+    styleTag.textContent = cssStyles;
+    document.head.appendChild(styleTag);
+
+  
 document.addEventListener('DOMContentLoaded', function () {
   var hamburger = document.querySelector('.hamburger');
   var navLinks = document.querySelector('.nav-links');
