@@ -1,1 +1,36 @@
-function _0x45e7(){var _0x52686e=['26qCvKVD','20px','open','flexDirection','0\x208px\x2018px\x20rgba(12,31,77,0.12)','10sjHvMN','999','zIndex','191908geinGF','40RywUoz','510CwLhXO','24wrNVEC','229526YNlQVd','toggle','classList','click','display','41585brXuIq','57003wruKhd','boxShadow','100%','right','style','absolute','2002416ByMwCo','312516HSPHeI','position','background','href','addEventListener','querySelectorAll','DOMContentLoaded','querySelector','2594165dgAqjM','.hamburger','scrollIntoView','forEach','left'];_0x45e7=function(){return _0x52686e;};return _0x45e7();}function _0x3a41(_0x5c6432,_0x2ac18e){_0x5c6432=_0x5c6432-0x16f;var _0x45e716=_0x45e7();var _0x3a41c2=_0x45e716[_0x5c6432];return _0x3a41c2;}var _0xc0d7fb=_0x3a41;(function(_0x4de73a,_0x1c1199){var _0x108bb0=_0x3a41,_0x49d0a4=_0x4de73a();while(!![]){try{var _0x146706=parseInt(_0x108bb0(0x173))/0x1*(-parseInt(_0x108bb0(0x187))/0x2)+parseInt(_0x108bb0(0x192))/0x3*(parseInt(_0x108bb0(0x18f))/0x4)+parseInt(_0x108bb0(0x172))/0x5*(parseInt(_0x108bb0(0x191))/0x6)+parseInt(_0x108bb0(0x182))/0x7+-parseInt(_0x108bb0(0x190))/0x8*(parseInt(_0x108bb0(0x17a))/0x9)+-parseInt(_0x108bb0(0x18c))/0xa*(-parseInt(_0x108bb0(0x193))/0xb)+-parseInt(_0x108bb0(0x179))/0xc;if(_0x146706===_0x1c1199)break;else _0x49d0a4['push'](_0x49d0a4['shift']());}catch(_0x4bdea4){_0x49d0a4['push'](_0x49d0a4['shift']());}}}(_0x45e7,0x61d37),document[_0xc0d7fb(0x17e)](_0xc0d7fb(0x180),function(){var _0x31794d=_0xc0d7fb,_0x338341=document[_0x31794d(0x181)](_0x31794d(0x183)),_0x1cda00=document[_0x31794d(0x181)]('.nav-links');_0x338341&&_0x1cda00&&_0x338341[_0x31794d(0x17e)](_0x31794d(0x170),function(){var _0x143c5e=_0x31794d;_0x1cda00['classList'][_0x143c5e(0x194)](_0x143c5e(0x189)),_0x1cda00[_0x143c5e(0x16f)]['contains'](_0x143c5e(0x189))?(_0x1cda00[_0x143c5e(0x177)][_0x143c5e(0x171)]='flex',_0x1cda00['style'][_0x143c5e(0x18a)]='column',_0x1cda00[_0x143c5e(0x177)][_0x143c5e(0x17b)]=_0x143c5e(0x178),_0x1cda00[_0x143c5e(0x177)]['top']=_0x143c5e(0x175),_0x1cda00[_0x143c5e(0x177)][_0x143c5e(0x186)]='0',_0x1cda00[_0x143c5e(0x177)][_0x143c5e(0x176)]='0',_0x1cda00[_0x143c5e(0x177)][_0x143c5e(0x17c)]='#fff',_0x1cda00[_0x143c5e(0x177)]['padding']=_0x143c5e(0x188),_0x1cda00['style'][_0x143c5e(0x174)]=_0x143c5e(0x18b),_0x1cda00[_0x143c5e(0x177)][_0x143c5e(0x18e)]=_0x143c5e(0x18d)):_0x1cda00[_0x143c5e(0x177)]['display']='none';}),document[_0x31794d(0x17f)]('a[href^=\x22#\x22]')[_0x31794d(0x185)](function(_0x281cf9){var _0x7b4105=_0x31794d;_0x281cf9[_0x7b4105(0x17e)]('click',function(_0x4e82ba){var _0x448c2d=_0x7b4105,_0x4eb5e8=document['querySelector'](this['getAttribute'](_0x448c2d(0x17d)));_0x4eb5e8&&(_0x4e82ba['preventDefault'](),_0x4eb5e8[_0x448c2d(0x184)]({'behavior':'smooth'}));});});}));
+// DISHA Recruitment — shared interactions
+document.addEventListener('DOMContentLoaded', function () {
+  var hamburger = document.querySelector('.hamburger');
+  var navLinks = document.querySelector('.nav-links');
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', function () {
+      navLinks.classList.toggle('open');
+      if (navLinks.classList.contains('open')) {
+        navLinks.style.display = 'flex';
+        navLinks.style.flexDirection = 'column';
+        navLinks.style.position = 'absolute';
+        navLinks.style.top = '100%';
+        navLinks.style.left = '0';
+        navLinks.style.right = '0';
+        navLinks.style.background = '#fff';
+        navLinks.style.padding = '20px';
+        navLinks.style.boxShadow = '0 8px 18px rgba(12,31,77,0.12)';
+        navLinks.style.zIndex = '999';
+      } else {
+        navLinks.style.display = 'none';
+      }
+    });
+  }
+
+  // Buttons that point to contact / hiring support scroll smoothly if anchor on same page
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+});
