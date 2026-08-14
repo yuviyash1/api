@@ -30,10 +30,9 @@
     autoCloseAfterMs: 0, // e.g. 15000 to auto-dismiss the welcome screen; 0 = never
 
     // ---- Countdown-to-midnight settings ----
-    // Set a fixed "YYYY-MM-DD" to only ever count down to/celebrate that one date.
-    // Leave null to recur every night: shows a countdown to the next midnight,
-    // then auto-celebrates as soon as the clock strikes 12, on every page it's injected into.
-    celebrationDate: 2026-08-14,
+    // Set a fixed "YYYY-MM-DD" activation date. The script will count down to this date,
+    // and once it is reached, the celebration will stay active indefinitely.
+    celebrationDate: "2026-08-13",
     countdownLabel: "🎂 Birthday celebration begins in"
   };
   /* ====================================================================== */
@@ -69,10 +68,6 @@
   const now0 = new Date();
   const target = getTarget();
 
-  // If a fixed celebrationDate was set and it's fully in the past, do nothing.
-  if (CONFIG.celebrationDate && now0 > target && now0.toDateString() !== target.toDateString()) {
-    return;
-  }
   // Already celebrated today — nothing more to do on this page load.
   if (hasCelebratedToday()) return;
 
