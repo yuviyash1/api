@@ -341,6 +341,27 @@
             user-select: none;
         }
 
+        .ab-logo {
+            position: relative;
+            z-index: 2;
+        
+            width: 150px;
+            max-width: 35vw;
+            height: auto;
+        
+            margin-bottom: 18px;
+        
+            border-radius: 12px;
+        
+            filter:
+                drop-shadow(0 8px 18px rgba(53,20,95,.15));
+        
+            opacity: 0;
+        
+            animation:
+                abFadeUp 1s ease forwards .05s;
+        }
+
         /* =====================================================
            BALLOONS
         ===================================================== */
@@ -599,6 +620,11 @@
             aria-label="Close birthday celebration">
             ×
         </button>
+        <img
+            class="ab-logo"
+            src="https://npa.ardon.in/img/npaardon.png"
+            alt="Ardon by Roljobs"
+        >
 
         <div class="ab-company">
             Ardon Technology Services Private Limited
