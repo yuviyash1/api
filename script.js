@@ -862,11 +862,6 @@
             aria-label="Close birthday celebration">
             ×
         </button>
-        <img
-            class="ab-logo"
-            src="https://npa.ardon.in/img/npaardon.png"
-            alt="Ardon by Roljobs"
-        >
 
         <div class="ab-company">
             Ardon Technology Services Private Limited
