@@ -15,8 +15,8 @@
     // celebration modes to cycle: confetti | balloons | fireworks | hearts | stars
     effects: ["confetti", "balloons", "fireworks", "hearts"],
     playSound: true,
-    onceADay: true, // don't re-show if already celebrated today on this domain
-    autoCloseAfterMs: 0 // e.g. 15000 to auto-dismiss the welcome screen; 0 = never
+    onceADay: false, // don't re-show if already celebrated today on this domain
+    autoCloseAfterMs: 5 // e.g. 15000 to auto-dismiss the welcome screen; 0 = never
   };
   /* ====================================================================== */
 
