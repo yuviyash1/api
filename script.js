@@ -49,14 +49,22 @@
   }
 
   // Resolve the target midnight we're counting down to.
-  function getTarget() {
-    if (CONFIG.celebrationDate) {
-      return new Date(CONFIG.celebrationDate + "T00:00:00");
-    }
+  // function getTarget() {
+  //   if (CONFIG.celebrationDate) {
+  //     return new Date(CONFIG.celebrationDate + "T00:00:00");
+  //   }
+  //   const t = new Date();
+  //   t.setHours(24, 0, 0, 0); // rolls forward to the *next* midnight
+  //   return t;
+  // }
+   function getTarget() {
     const t = new Date();
-    t.setHours(24, 0, 0, 0); // rolls forward to the *next* midnight
+
+    // TEST: celebrate 30 seconds after script loads
+    t.setSeconds(t.getSeconds() + 30);
+
     return t;
-  }
+}
 
   const now0 = new Date();
   const target = getTarget();
