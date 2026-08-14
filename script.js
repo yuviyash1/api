@@ -1,14 +1,3 @@
-/* ==========================================================================
-   UNIVERSAL BIRTHDAY CELEBRATION — Browser Injection Script
-   Works on ANY website. Paste into DevTools console, a bookmarklet,
-   a Tampermonkey/Greasemonkey userscript, or a browser extension content script.
-
-   HOW TO USE
-   1. Edit the CONFIG block below (name, company, message, theme).
-   2. Paste the whole script into the browser console on any page, OR
-   3. Wrap it as a bookmarklet: javascript:(function(){ ...minified... })();
-   4. Or save as a Tampermonkey userscript with @match *://*/*
-   ========================================================================== */
 
 (() => {
   if (document.getElementById("bc-overlay-root")) return;
