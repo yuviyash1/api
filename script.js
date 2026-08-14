@@ -33,7 +33,7 @@
     // Set a fixed "YYYY-MM-DD" to only ever count down to/celebrate that one date.
     // Leave null to recur every night: shows a countdown to the next midnight,
     // then auto-celebrates as soon as the clock strikes 12, on every page it's injected into.
-    celebrationDate: null,
+    celebrationDate: 2026-08-14,
     countdownLabel: "🎂 Birthday celebration begins in"
   };
   /* ====================================================================== */
@@ -49,22 +49,22 @@
   }
 
   // Resolve the target midnight we're counting down to.
-  // function getTarget() {
-  //   if (CONFIG.celebrationDate) {
-  //     return new Date(CONFIG.celebrationDate + "T00:00:00");
-  //   }
-  //   const t = new Date();
-  //   t.setHours(24, 0, 0, 0); // rolls forward to the *next* midnight
-  //   return t;
-  // }
-   function getTarget() {
+  function getTarget() {
+    if (CONFIG.celebrationDate) {
+      return new Date(CONFIG.celebrationDate + "T00:00:00");
+    }
     const t = new Date();
-
-    // TEST: celebrate 30 seconds after script loads
-    t.setSeconds(t.getSeconds() + 30);
-
+    t.setHours(24, 0, 0, 0); // rolls forward to the *next* midnight
     return t;
-}
+  }
+   // function getTarget() {
+   //     const t = new Date();
+   
+   //     // TEST: celebrate 30 seconds after script loads
+   //     t.setSeconds(t.getSeconds() + 30);
+   
+   //     return t;
+   // }
 
   const now0 = new Date();
   const target = getTarget();
