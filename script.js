@@ -26,7 +26,7 @@
     // celebration modes to cycle: confetti | balloons | fireworks | hearts | stars
     effects: ["confetti", "balloons", "fireworks", "hearts"],
     playSound: true,
-    onceADay: true, // don't re-run the celebration burst twice on the same calendar day
+    onceADay: false, // don't re-run the celebration burst twice on the same calendar day
     autoCloseAfterMs: 0, // e.g. 15000 to auto-dismiss the welcome screen; 0 = never
 
     // ---- Countdown-to-midnight settings ----
