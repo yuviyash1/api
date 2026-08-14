@@ -7,606 +7,848 @@
     overlay.innerHTML = `
     <style>
         #ardon-birthday-celebration {
-            position: fixed;
-            inset: 0;
-            z-index: 2147483647;
-            overflow: hidden;
-            pointer-events: none;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        #ardon-birthday-celebration * {
-            box-sizing: border-box;
-        }
-
-        /* =====================================================
-           PREMIUM LIGHT OPENING SCREEN
-        ===================================================== */
-
-        .ab-welcome {
-            position: absolute;
-            inset: 0;
-            z-index: 1000;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            padding: 30px;
-            text-align: center;
-
-            color: #35145f;
-
-            background:
-                radial-gradient(
-                    circle at 50% 30%,
-                    rgba(255,255,255,.98),
-                    transparent 34%
-                ),
-                radial-gradient(
-                    circle at 12% 85%,
-                    rgba(216,180,254,.45),
-                    transparent 35%
-                ),
-                radial-gradient(
-                    circle at 88% 18%,
-                    rgba(125,211,252,.32),
-                    transparent 35%
-                ),
-                linear-gradient(
-                    135deg,
-                    #ffffff,
-                    #faf5ff,
-                    #f3e8ff,
-                    #eff6ff
-                );
-
-            transition:
-                opacity .8s ease,
-                visibility .8s ease;
-        }
-
-        .ab-welcome.hidden {
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
-        }
-
-        /* =====================================================
-           DECORATIVE GLOW
-        ===================================================== */
-
-        .ab-welcome::before {
-            content: "";
-            position: absolute;
-
-            width: 550px;
-            height: 550px;
-
-            border-radius: 50%;
-
-            background:
-                radial-gradient(
-                    circle,
-                    rgba(124,58,237,.12),
-                    transparent 68%
-                );
-
-            animation:
-                abAmbientGlow 5s ease-in-out infinite alternate;
-
-            pointer-events: none;
-        }
-
-        /* =====================================================
-           COMPANY NAME
-        ===================================================== */
-
-        .ab-company {
-            position: relative;
-            z-index: 2;
-
-            font-size: clamp(12px, 2vw, 18px);
-            font-weight: 700;
+    position: fixed;
+    inset: 0;
+    z-index: 2147483647;
+    overflow: hidden;
+    pointer-events: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#ardon-birthday-celebration * {
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   FULL SCREEN WELCOME
+========================================================= */
+
+.ab-welcome {
+    position: absolute;
+    inset: 0;
+    z-index: 1000;
+
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    text-align: center;
+
+    color: #35145f;
+
+    background:
+        radial-gradient(
+            circle at 50% 25%,
+            rgba(255,255,255,.98),
+            transparent 34%
+        ),
+        radial-gradient(
+            circle at 10% 85%,
+            rgba(216,180,254,.42),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 90% 15%,
+            rgba(125,211,252,.30),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #faf5ff,
+            #f3e8ff,
+            #eff6ff
+        );
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    transition:
+        opacity .8s ease,
+        visibility .8s ease;
+}
+
+.ab-welcome.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* =========================================================
+   BACKGROUND GLOW
+========================================================= */
+
+.ab-welcome::before {
+    content: "";
 
-            letter-spacing: 2px;
-            text-transform: uppercase;
+    position: absolute;
+
+    width: min(550px, 80vw);
+    height: min(550px, 80vw);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(124,58,237,.10),
+            transparent 68%
+        );
+
+    animation:
+        abAmbientGlow 5s ease-in-out infinite alternate;
 
-            color: #5b21b6;
+    pointer-events: none;
+}
 
-            margin-bottom: 18px;
+/* =========================================================
+   CONTENT
+========================================================= */
 
-            opacity: 0;
+.ab-company,
+.ab-logo,
+.ab-cake,
+.ab-title,
+.ab-name,
+.ab-message,
+.ab-wish-line {
+    position: relative;
+    z-index: 2;
+}
 
-            animation:
-                abFadeUp 1s ease forwards .2s;
-        }
+/* =========================================================
+   LOGO
+========================================================= */
 
-        /* =====================================================
-           CAKE
-        ===================================================== */
+.ab-logo {
+    display: block;
 
-        .ab-cake {
-            position: relative;
-            z-index: 2;
+    width: 120px;
+    height: auto;
 
-            font-size: clamp(70px, 10vw, 125px);
+    max-width: 25vw;
+    max-height: 95px;
 
-            margin-bottom: 5px;
+    object-fit: contain;
 
-            filter:
-                drop-shadow(0 8px 15px rgba(109,40,217,.18))
-                drop-shadow(0 0 25px rgba(245,158,11,.18));
+    margin: 0 auto 10px;
 
-            animation:
-                abCakeBounce 1.4s ease-in-out infinite alternate,
-                abFadeUp 1s ease forwards;
-        }
+    filter:
+        drop-shadow(
+            0 6px 15px rgba(53,20,95,.15)
+        );
 
-        /* =====================================================
-           MAIN TITLE
-        ===================================================== */
+    opacity: 0;
 
-        .ab-title {
-            position: relative;
-            z-index: 2;
+    animation:
+        abFadeUp 1s ease forwards .05s;
+}
 
-            font-size: clamp(38px, 7vw, 85px);
-            font-weight: 950;
+/* =========================================================
+   COMPANY NAME
+========================================================= */
 
-            line-height: 1.05;
+.ab-company {
+    font-size: clamp(11px, 1.7vw, 17px);
 
-            margin: 10px 0;
+    font-weight: 700;
 
-            letter-spacing: 2px;
+    letter-spacing: 1.8px;
 
-            background:
-                linear-gradient(
-                    90deg,
-                    #5b21b6,
-                    #7c3aed,
-                    #d97706,
-                    #7c3aed,
-                    #5b21b6
-                );
+    text-transform: uppercase;
 
-            background-size: 400%;
+    color: #5b21b6;
 
-            -webkit-background-clip: text;
-            background-clip: text;
+    margin-bottom: 8px;
 
-            color: transparent;
+    opacity: 0;
 
-            animation:
-                abGradient 5s linear infinite,
-                abTitlePop 1s ease forwards .4s;
-        }
+    animation:
+        abFadeUp 1s ease forwards .2s;
+}
 
-        /* =====================================================
-           NAME
-        ===================================================== */
+/* =========================================================
+   CAKE
+========================================================= */
 
-        .ab-name {
-            position: relative;
-            z-index: 2;
+.ab-cake {
+    font-size: clamp(52px, 7vw, 90px);
 
-            font-size: clamp(32px, 5vw, 65px);
-            font-weight: 900;
+    line-height: 1;
 
-            margin: 8px 0 22px;
+    margin-bottom: 2px;
 
-            color: #6d28d9;
+    filter:
+        drop-shadow(
+            0 8px 15px rgba(109,40,217,.18)
+        );
 
-            animation:
-                abNameGlow 2.5s ease-in-out infinite alternate,
-                abFadeUp 1s ease forwards .7s;
-        }
+    animation:
+        abCakeBounce 1.4s ease-in-out infinite alternate,
+        abFadeUp 1s ease forwards;
+}
 
-        /* =====================================================
-           MESSAGE
-        ===================================================== */
+/* =========================================================
+   TITLE
+========================================================= */
 
-        .ab-message {
-            position: relative;
-            z-index: 2;
+.ab-title {
+    font-size: clamp(32px, 6vw, 70px);
 
-            max-width: 900px;
+    font-weight: 950;
 
-            font-size: clamp(17px, 2.4vw, 27px);
-            line-height: 1.55;
+    line-height: 1.05;
 
-            color: #3f3154;
+    margin: 5px 0;
 
-            opacity: 0;
+    letter-spacing: 1.5px;
 
-            animation:
-                abFadeUp 1.2s ease forwards 1s;
-        }
+    background:
+        linear-gradient(
+            90deg,
+            #5b21b6,
+            #7c3aed,
+            #d97706,
+            #7c3aed,
+            #5b21b6
+        );
 
-        .ab-message strong {
-            color: #6d28d9;
-        }
+    background-size: 400%;
 
-        /* =====================================================
-           WISH LINE
-        ===================================================== */
+    -webkit-background-clip: text;
+    background-clip: text;
 
-        .ab-wish-line {
-            position: relative;
-            z-index: 2;
+    color: transparent;
 
-            margin-top: 25px;
+    animation:
+        abGradient 5s linear infinite,
+        abTitlePop 1s ease forwards .4s;
+}
 
-            font-size: clamp(14px, 2vw, 20px);
+/* =========================================================
+   ROLAND SIR
+========================================================= */
 
-            color: #5b21b6;
+.ab-name {
+    font-size: clamp(27px, 4vw, 52px);
 
-            font-weight: 600;
+    font-weight: 900;
 
-            opacity: 0;
+    line-height: 1.1;
 
-            animation:
-                abFadeUp 1.2s ease forwards 1.3s;
-        }
+    margin: 5px 0 12px;
 
-        /* =====================================================
-           CLOSE BUTTON
-        ===================================================== */
+    color: #6d28d9;
 
-        .ab-close {
-            position: absolute;
+    animation:
+        abNameGlow 2.5s ease-in-out infinite alternate,
+        abFadeUp 1s ease forwards .7s;
+}
 
-            top: 22px;
-            right: 25px;
+/* =========================================================
+   MESSAGE
+========================================================= */
 
-            width: 48px;
-            height: 48px;
+.ab-message {
+    max-width: 800px;
 
-            border-radius: 50%;
+    font-size: clamp(15px, 2vw, 22px);
 
-            border: 1px solid rgba(91,33,182,.2);
+    line-height: 1.4;
 
-            background:
-                rgba(255,255,255,.75);
+    color: #3f3154;
 
-            color: #5b21b6;
+    opacity: 0;
 
-            font-size: 28px;
-            line-height: 1;
+    animation:
+        abFadeUp 1.2s ease forwards 1s;
+}
 
-            cursor: pointer;
+.ab-message strong {
+    color: #6d28d9;
+}
 
-            pointer-events: auto;
+/* =========================================================
+   BOTTOM WISH LINE
+========================================================= */
 
-            box-shadow:
-                0 5px 20px rgba(91,33,182,.12);
+.ab-wish-line {
+    max-width: 900px;
 
-            backdrop-filter: blur(10px);
+    margin-top: 14px;
 
-            transition:
-                transform .3s ease,
-                background .3s ease,
-                box-shadow .3s ease;
-        }
+    font-size: clamp(12px, 1.7vw, 18px);
 
-        .ab-close:hover {
-            transform:
-                rotate(90deg)
-                scale(1.12);
+    line-height: 1.8;
 
-            background:
-                #ffffff;
+    color: #5b21b6;
 
-            box-shadow:
-                0 8px 25px rgba(91,33,182,.22);
-        }
+    font-weight: 600;
 
-        /* =====================================================
-           RAIN LAYER
-        ===================================================== */
+    opacity: 0;
 
-        .ab-rain {
-            position: absolute;
-            inset: 0;
+    animation:
+        abFadeUp 1.2s ease forwards 1.3s;
+}
 
-            overflow: hidden;
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
 
-            pointer-events: none;
-        }
+.ab-close {
+    position: absolute;
 
-        /* =====================================================
-           WISH RAIN
-        ===================================================== */
+    top: 20px;
+    right: 22px;
 
-        .ab-wish {
-            position: absolute;
+    z-index: 2000;
 
-            top: -80px;
+    width: 46px;
+    height: 46px;
 
-            white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-            font-size: 17px;
-            font-weight: 700;
+    border-radius: 50%;
 
-            color: #4c1d95;
+    border: 1px solid rgba(91,33,182,.20);
 
-            text-shadow:
-                0 1px 2px rgba(255,255,255,.98),
-                0 2px 6px rgba(76,29,149,.16);
+    background:
+        rgba(255,255,255,.82);
 
-            animation:
-                abRain linear forwards;
+    color: #5b21b6;
 
-            user-select: none;
-        }
+    font-size: 27px;
 
-        .ab-logo {
-            position: relative;
-            z-index: 2;
-        
-            width: 150px;
-            max-width: 35vw;
-            height: auto;
-        
-            margin-bottom: 18px;
-        
-            border-radius: 12px;
-        
-            filter:
-                drop-shadow(0 8px 18px rgba(53,20,95,.15));
-        
-            opacity: 0;
-        
-            animation:
-                abFadeUp 1s ease forwards .05s;
-        }
+    line-height: 1;
 
-        /* =====================================================
-           BALLOONS
-        ===================================================== */
+    cursor: pointer;
 
-        .ab-balloon {
-            position: absolute;
+    pointer-events: auto;
 
-            bottom: -150px;
+    box-shadow:
+        0 5px 20px rgba(91,33,182,.12);
 
-            font-size: 60px;
+    backdrop-filter: blur(10px);
 
-            animation:
-                abBalloon linear forwards;
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
+}
 
-            user-select: none;
+.ab-close:hover {
+    transform:
+        rotate(90deg)
+        scale(1.1);
 
-            filter:
-                drop-shadow(
-                    0 5px 7px rgba(0,0,0,.18)
-                );
-        }
+    background:
+        #ffffff;
 
-        /* =====================================================
-           CONFETTI
-        ===================================================== */
+    box-shadow:
+        0 8px 25px rgba(91,33,182,.22);
+}
 
-        .ab-confetti {
-            position: absolute;
+/* =========================================================
+   TRANSPARENT RAIN LAYER
+========================================================= */
 
-            top: -30px;
+.ab-rain {
+    position: absolute;
 
-            width: 8px;
-            height: 15px;
+    inset: 0;
 
-            border-radius: 2px;
+    width: 100%;
+    height: 100%;
 
-            animation:
-                abConfetti linear forwards;
-        }
+    overflow: hidden;
 
-        /* =====================================================
-           SPARKLES
-        ===================================================== */
+    pointer-events: none;
+}
 
-        .ab-spark {
-            position: absolute;
+/* =========================================================
+   WISH RAIN
+========================================================= */
 
-            font-size: 23px;
+.ab-wish {
+    position: absolute;
 
-            animation:
-                abSpark 2s ease-in-out infinite;
+    top: -80px;
 
-            user-select: none;
-        }
+    white-space: nowrap;
 
-        /* =====================================================
-           ANIMATIONS
-        ===================================================== */
+    font-size: 17px;
 
-        @keyframes abFadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(25px);
-            }
+    font-weight: 700;
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    color: #4c1d95;
 
-        @keyframes abTitlePop {
-            from {
-                transform: scale(.75);
-            }
+    text-shadow:
+        0 1px 2px rgba(255,255,255,.98),
+        0 2px 6px rgba(76,29,149,.16);
 
-            to {
-                transform: scale(1);
-            }
-        }
+    animation:
+        abRain linear forwards;
 
-        @keyframes abCakeBounce {
-            from {
-                transform:
-                    translateY(0)
-                    rotate(-2deg);
-            }
+    user-select: none;
 
-            to {
-                transform:
-                    translateY(-15px)
-                    rotate(2deg);
-            }
-        }
+    pointer-events: none;
+}
 
-        @keyframes abGradient {
-            to {
-                background-position: 400%;
-            }
-        }
+/* =========================================================
+   BALLOONS
+========================================================= */
 
-        @keyframes abNameGlow {
-            from {
-                text-shadow:
-                    0 2px 8px rgba(109,40,217,.15);
-            }
+.ab-balloon {
+    position: absolute;
 
-            to {
-                text-shadow:
-                    0 3px 15px rgba(109,40,217,.35),
-                    0 0 30px rgba(245,158,11,.18);
-            }
-        }
+    bottom: -150px;
 
-        @keyframes abAmbientGlow {
-            from {
-                transform: scale(.85);
-                opacity: .6;
-            }
+    font-size: 60px;
 
-            to {
-                transform: scale(1.15);
-                opacity: 1;
-            }
-        }
+    animation:
+        abBalloon linear forwards;
 
-        @keyframes abRain {
+    user-select: none;
 
-            0% {
-                transform:
-                    translateY(0)
-                    rotate(-5deg);
+    pointer-events: none;
 
-                opacity: 0;
-            }
+    filter:
+        drop-shadow(
+            0 5px 7px rgba(0,0,0,.18)
+        );
+}
 
-            10% {
-                opacity: .88;
-            }
+/* =========================================================
+   CONFETTI
+========================================================= */
 
-            85% {
-                opacity: .82;
-            }
+.ab-confetti {
+    position: absolute;
 
-            100% {
-                transform:
-                    translateY(115vh)
-                    rotate(5deg);
+    top: -30px;
 
-                opacity: 0;
-            }
-        }
+    width: 8px;
+    height: 15px;
 
-        @keyframes abBalloon {
+    border-radius: 2px;
 
-            0% {
-                transform:
-                    translateY(0)
-                    translateX(0)
-                    rotate(-8deg);
+    animation:
+        abConfetti linear forwards;
 
-                opacity: 0;
-            }
+    pointer-events: none;
+}
 
-            10% {
-                opacity: .8;
-            }
+/* =========================================================
+   SPARKLES
+========================================================= */
 
-            50% {
-                transform:
-                    translateY(-60vh)
-                    translateX(40px)
-                    rotate(8deg);
-            }
+.ab-spark {
+    position: absolute;
 
-            100% {
-                transform:
-                    translateY(-125vh)
-                    translateX(-30px)
-                    rotate(-8deg);
+    font-size: 23px;
 
-                opacity: 0;
-            }
-        }
+    animation:
+        abSpark 2s ease-in-out infinite;
 
-        @keyframes abConfetti {
+    user-select: none;
 
-            0% {
-                transform:
-                    translateY(0)
-                    rotate(0deg);
+    pointer-events: none;
+}
 
-                opacity: 1;
-            }
+/* =========================================================
+   ANIMATIONS
+========================================================= */
 
-            100% {
-                transform:
-                    translateY(115vh)
-                    rotate(720deg);
+@keyframes abFadeUp {
 
-                opacity: 0;
-            }
-        }
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
 
-        @keyframes abSpark {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-            0%, 100% {
-                transform: scale(.5);
-                opacity: .15;
-            }
+@keyframes abTitlePop {
 
-            50% {
-                transform: scale(1.4);
-                opacity: .8;
-            }
-        }
+    from {
+        transform: scale(.75);
+    }
 
-        /* =====================================================
-           MOBILE
-        ===================================================== */
+    to {
+        transform: scale(1);
+    }
+}
 
-        @media (max-width: 600px) {
+@keyframes abCakeBounce {
 
-            .ab-welcome {
-                padding: 20px;
-            }
+    from {
+        transform:
+            translateY(0)
+            rotate(-2deg);
+    }
 
-            .ab-company {
-                letter-spacing: 1px;
-            }
+    to {
+        transform:
+            translateY(-12px)
+            rotate(2deg);
+    }
+}
 
-            .ab-message {
-                font-size: 16px;
-            }
+@keyframes abGradient {
 
-            .ab-wish-line {
-                font-size: 13px;
-                line-height: 1.8;
-            }
+    to {
+        background-position: 400%;
+    }
+}
 
-            .ab-close {
-                top: 15px;
-                right: 15px;
-            }
-        }
+@keyframes abNameGlow {
+
+    from {
+        text-shadow:
+            0 2px 8px rgba(109,40,217,.15);
+    }
+
+    to {
+        text-shadow:
+            0 3px 15px rgba(109,40,217,.35),
+            0 0 30px rgba(245,158,11,.18);
+    }
+}
+
+@keyframes abAmbientGlow {
+
+    from {
+        transform: scale(.85);
+        opacity: .6;
+    }
+
+    to {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+}
+
+@keyframes abRain {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(-5deg);
+
+        opacity: 0;
+    }
+
+    10% {
+        opacity: .88;
+    }
+
+    85% {
+        opacity: .82;
+    }
+
+    100% {
+        transform:
+            translateY(115vh)
+            rotate(5deg);
+
+        opacity: 0;
+    }
+}
+
+@keyframes abBalloon {
+
+    0% {
+        transform:
+            translateY(0)
+            translateX(0)
+            rotate(-8deg);
+
+        opacity: 0;
+    }
+
+    10% {
+        opacity: .8;
+    }
+
+    50% {
+        transform:
+            translateY(-60vh)
+            translateX(40px)
+            rotate(8deg);
+    }
+
+    100% {
+        transform:
+            translateY(-125vh)
+            translateX(-30px)
+            rotate(-8deg);
+
+        opacity: 0;
+    }
+}
+
+@keyframes abConfetti {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateY(115vh)
+            rotate(720deg);
+
+        opacity: 0;
+    }
+}
+
+@keyframes abSpark {
+
+    0%,
+    100% {
+        transform: scale(.5);
+        opacity: .15;
+    }
+
+    50% {
+        transform: scale(1.4);
+        opacity: .8;
+    }
+}
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .ab-logo {
+        width: 105px;
+        max-height: 85px;
+    }
+
+    .ab-company {
+        font-size: 13px;
+    }
+
+    .ab-message {
+        max-width: 700px;
+    }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .ab-welcome {
+        justify-content: flex-start;
+
+        padding:
+            65px
+            18px
+            25px;
+    }
+
+    .ab-logo {
+        width: 95px;
+        max-width: 30vw;
+        max-height: 75px;
+
+        margin-bottom: 6px;
+    }
+
+    .ab-company {
+        font-size: 10px;
+
+        letter-spacing: 1px;
+
+        margin-bottom: 5px;
+    }
+
+    .ab-cake {
+        font-size: 55px;
+    }
+
+    .ab-title {
+        font-size: 35px;
+
+        letter-spacing: 1px;
+    }
+
+    .ab-name {
+        font-size: 31px;
+
+        margin-bottom: 12px;
+    }
+
+    .ab-message {
+        font-size: 15px;
+
+        line-height: 1.45;
+
+        max-width: 95%;
+    }
+
+    .ab-wish-line {
+        font-size: 12px;
+
+        line-height: 1.8;
+
+        margin-top: 10px;
+    }
+
+    .ab-close {
+        top: 14px;
+        right: 14px;
+
+        width: 43px;
+        height: 43px;
+
+        font-size: 24px;
+    }
+
+    .ab-wish {
+        font-size: 14px;
+    }
+
+    .ab-balloon {
+        font-size: 45px;
+    }
+}
+
+/* =========================================================
+   SMALL HEIGHT LAPTOPS
+========================================================= */
+
+@media (max-height: 700px) and (min-width: 601px) {
+
+    .ab-welcome {
+        justify-content: flex-start;
+
+        padding-top: 12px;
+        padding-bottom: 15px;
+    }
+
+    .ab-logo {
+        width: 80px;
+        max-height: 60px;
+
+        margin-bottom: 3px;
+    }
+
+    .ab-company {
+        font-size: 11px;
+
+        margin-bottom: 3px;
+    }
+
+    .ab-cake {
+        font-size: 45px;
+    }
+
+    .ab-title {
+        font-size: 35px;
+
+        margin: 2px 0;
+    }
+
+    .ab-name {
+        font-size: 30px;
+
+        margin: 3px 0 8px;
+    }
+
+    .ab-message {
+        font-size: 14px;
+
+        line-height: 1.3;
+
+        max-width: 700px;
+    }
+
+    .ab-wish-line {
+        font-size: 12px;
+
+        margin-top: 6px;
+    }
+}
+
+/* =========================================================
+   VERY SMALL HEIGHT SCREENS
+========================================================= */
+
+@media (max-height: 580px) {
+
+    .ab-welcome {
+        justify-content: flex-start;
+
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    .ab-logo {
+        width: 65px;
+        max-height: 48px;
+    }
+
+    .ab-company {
+        font-size: 9px;
+    }
+
+    .ab-cake {
+        font-size: 38px;
+    }
+
+    .ab-title {
+        font-size: 28px;
+    }
+
+    .ab-name {
+        font-size: 25px;
+    }
+
+    .ab-message {
+        font-size: 12px;
+
+        max-width: 650px;
+    }
+
+    .ab-wish-line {
+        font-size: 10px;
+    }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .ab-welcome *,
+    .ab-rain * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
     </style>
 
     <!-- ============================================
