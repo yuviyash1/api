@@ -32,7 +32,7 @@
     // ---- Countdown-to-midnight settings ----
     // Set a fixed "YYYY-MM-DD" activation date. The script will count down to this date,
     // and once it is reached, the celebration will stay active indefinitely.
-    celebrationDate: "2026-08-15",
+    celebrationDate: "2026-08-14",
     countdownLabel: "🎂 Birthday celebration begins in"
   };
   /* ====================================================================== */
@@ -48,22 +48,22 @@
   }
 
   // Resolve the target midnight we're counting down to.
-  // function getTarget() {
-  //   if (CONFIG.celebrationDate) {
-  //     return new Date(CONFIG.celebrationDate + "T00:00:00");
-  //   }
-  //   const t = new Date();
-  //   t.setHours(24, 0, 0, 0); // rolls forward to the *next* midnight
-  //   return t;
-  // }
-   function getTarget() {
-       const t = new Date();
+  function getTarget() {
+    if (CONFIG.celebrationDate) {
+      return new Date(CONFIG.celebrationDate + "T00:00:00");
+    }
+    const t = new Date();
+    t.setHours(24, 0, 0, 0); // rolls forward to the *next* midnight
+    return t;
+  }
+   // function getTarget() {
+   //     const t = new Date();
    
-       // TEST: celebrate 30 seconds after script loads
-       t.setSeconds(t.getSeconds() + 10);
+   //     // TEST: celebrate 30 seconds after script loads
+   //     t.setSeconds(t.getSeconds() + 10);
    
-       return t;
-   }
+   //     return t;
+   // }
 
   const now0 = new Date();
   const target = getTarget();
