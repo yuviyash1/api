@@ -32,7 +32,7 @@
     // ---- Countdown-to-midnight settings ----
     // Set a fixed "YYYY-MM-DD" activation date. The script will count down to this date,
     // and once it is reached, the celebration will stay active indefinitely.
-    celebrationDate: "2026-08-13",
+    celebrationDate: "2026-08-15",
     countdownLabel: "🎂 Birthday celebration begins in"
   };
   /* ====================================================================== */
