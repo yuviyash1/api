@@ -1,1 +1,964 @@
-function _0x130f(){const _0x23bf73=['style','3075136SJtioW','2985426TQJnPQ','/*\x20==========================================================================\x0a\x20\x20\x20Yuvi\x20The\x20Legend\x20—\x20SHARED\x20STYLES\x0a\x20\x20\x20==========================================================================\x0a\x20\x20\x20Copyright\x20(c)\x202026\x20Yashwant\x20Singh.\x20All\x20rights\x20reserved.\x0a\x20\x20\x20\x0a\x20\x20\x20Brand:\x20Yuvi\x20The\x20Legend\x0a\x20\x20\x20Author:\x20Yashwant\x20Singh\x0a\x20\x20\x20Repository:\x20https://github.com/yuviyash1/api\x0a\x20\x20\x20Description:\x20Global\x20stylesheet\x20containing\x20CSS\x20variables\x20and\x20base\x20reset\x20rules.\x0a\x20\x20\x20==========================================================================\x0a\x0a\x20\x20\x20⚠️\x20WARNING:\x20DO\x20NOT\x20COPY\x20AND\x20PASTE\x20THIS\x20CODE.\x20\x0a\x20\x20\x20UNAUTHORIZED\x20USE\x20WILL\x20CAUSE\x20YOUR\x20WEBSITE\x20TO\x20CRASH!\x20⚠️\x0a\x20\x20\x20==========================================================================\x20*/\x0a\x0a@import\x20url(\x22data:text/css;base64,LyogPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0NCiAgIFl1dmkgVGhlIExlZ2VuZCDigJQgU0hBUkVEIFNUWUxFUw0KICAgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0NCiAgIENvcHlyaWdodCAoYykgMjAyNiBZYXNod2FudCBTaW5naC4gQWxsIHJpZ2h0cyByZXNlcnZlZC4NCiAgIA0KICAgQnJhbmQ6IFl1dmkgVGhlIExlZ2VuZA0KICAgQXV0aG9yOiBZYXNod2FudCBTaW5naA0KICAgUmVwb3NpdG9yeTogaHR0cHM6Ly9naXRodWIuY29tL3l1dml5YXNoMS9hcGkNCiAgIERlc2NyaXB0aW9uOiBHbG9iYWwgc3R5bGVzaGVldCBjb250YWluaW5nIENTUyB2YXJpYWJsZXMgYW5kIGJhc2UgcmVzZXQgcnVsZXMuDQogICA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQ0KDQogICDimqDvuI8gV0FSTklORzogRE8gTk9UIENPUFkgQU5EIFBBU1RFIFRISVMgQ09ERS4gDQogICBVTkFVVEhPUklaRUQgVVNFIFdJTEwgQ0FVU0UgWU9VUiBXRUJTSVRFIFRPIENSQVNIISDimqDvuI8NCiAgID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09ICovDQoNCjpyb290ey0tbmF2eTojMGMxZjRkOy0tbmF2eS1saWdodDojMTYyNzVlOy0tb3JhbmdlOiNmNDYzMWU7LS1vcmFuZ2UtZGFyazojZTA1MDFhOy0tYmctZ3JleTojZjVmNmY4Oy0tbGluZTojZTdlOWVlOy0tdGV4dC1kYXJrOiMxNjI3NWU7LS10ZXh0LWJvZHk6IzRiNTQ2ODstLXdoaXRlOiNmZmZmZmY7LS1yYWRpdXM6MTBweDstLXNoYWRvdzowIDRweCAxOHB4IHJnYmEoMTIsMzEsNzcsMC4wOCl9KnttYXJnaW46MDtwYWRkaW5nOjA7Ym94LXNpemluZzpib3JkZXItYm94fWh0bWx7c2Nyb2xsLWJlaGF2aW9yOnNtb290aH1ib2R5e2ZvbnQtZmFtaWx5OidJbnRlcicsLWFwcGxlLXN5c3RlbSxCbGlua01hY1N5c3RlbUZvbnQsJ1NlZ29lIFVJJyxSb2JvdG8sSGVsdmV0aWNhLEFyaWFsLHNhbnMtc2VyaWY7Y29sb3I6dmFyKC0tdGV4dC1ib2R5KTtiYWNrZ3JvdW5kOnZhcigtLXdoaXRlKTtsaW5lLWhlaWdodDoxLjV9aW1ne21heC13aWR0aDoxMDAlO2Rpc3BsYXk6YmxvY2t9YXt0ZXh0LWRlY29yYXRpb246bm9uZTtjb2xvcjppbmhlcml0fXVse2xpc3Qtc3R5bGU6bm9uZX1zZWN0aW9ue3dpZHRoOjEwMCV9LmNvbnRhaW5lcnt3aWR0aDoxMDAlO21heC13aWR0aDoxNTAwcHg7bWFyZ2luOjAgYXV0bztwYWRkaW5nOjAgNDBweH1oMSxoMixoMyxoNHtjb2xvcjp2YXIoLS10ZXh0LWRhcmspO2ZvbnQtd2VpZ2h0OjgwMDtsaW5lLWhlaWdodDoxLjJ9LnRvcC1iYXJ7YmFja2dyb3VuZDp2YXIoLS1uYXZ5KTtjb2xvcjojY2ZkNmVhO2ZvbnQtc2l6ZToxMy41cHh9LnRvcC1iYXIgLmNvbnRhaW5lcntkaXNwbGF5OmZsZXg7anVzdGlmeS1jb250ZW50OnNwYWNlLWJldHdlZW47YWxpZ24taXRlbXM6Y2VudGVyO3BhZGRpbmc6OHB4IDQwcHh9LnRvcC1iYXItbGVmdHtkaXNwbGF5OmZsZXg7Z2FwOjI4cHg7YWxpZ24taXRlbXM6Y2VudGVyfS50b3AtYmFyLWxlZnQgYXtjb2xvcjojZTdlYWYzO2Rpc3BsYXk6ZmxleDthbGlnbi1pdGVtczpjZW50ZXI7Z2FwOjhweH0udG9wLWJhci1sZWZ0IGl7Y29sb3I6dmFyKC0tb3JhbmdlKX0udG9wLWJhci1yaWdodHtkaXNwbGF5OmZsZXg7YWxpZ24taXRlbXM6Y2VudGVyO2dhcDoxMHB4fS50b3AtYmFyLXJpZ2h0IC5zb2NpYWwtaWNvbnt3aWR0aDoyNnB4O2hlaWdodDoyNnB4O2JvcmRlci1yYWRpdXM6NHB4O2JhY2tncm91bmQ6IzFjMzI3MDtkaXNwbGF5OmZsZXg7YWxpZ24taXRlbXM6Y2VudGVyO2p1c3RpZnktY29udGVudDpjZW50ZXI7Y29sb3I6I2ZmZjtmb250LXNpemU6MTNweH0ubmF2YmFye2Rpc3BsYXk6ZmxleDthbGlnbi1pdGVtczpjZW50ZXI7anVzdGlmeS1jb250ZW50OnNwYWNlLWJldHdlZW47cGFkZGluZzoxOHB4IDQwcHg7Ym9yZGVyLWJvdHRvbToxcHggc29saWQgdmFyKC0tbGluZSl9LmxvZ297ZGlzcGxheTpmbGV4O2ZsZXgtZGlyZWN0aW9uOmNvbHVtbjtsaW5lLWhlaWdodDoxfS5sb2dvIC5sb2dvLW1haW57Zm9udC1zaXplOjMwcHg7Zm9udC13ZWlnaHQ6ODAwO2NvbG9yOnZhcigtLW9yYW5nZSk7bGV0dGVyLXNwYWNpbmc6LjVweH0ubG9nbyAubG9nby1zdWJ7Zm9udC1zaXplOjEycHg7Zm9udC13ZWlnaHQ6NzAwO2NvbG9yOnZhcigtLW5hdnkpO2xldHRlci1zcGFjaW5nOjNweDttYXJnaW4tdG9wOjJweH0ubmF2LWxpbmtze2Rpc3BsYXk6ZmxleDthbGlnbi1pdGVtczpjZW50ZXI7Z2FwOjM0cHh9Lm5hdi1saW5rcyBhe2ZvbnQtc2l6ZToxNXB4O2ZvbnQtd2VpZ2h0OjYwMDtjb2xvcjp2YXIoLS1uYXZ5KTtwb3NpdGlvbjpyZWxhdGl2ZTtwYWRkaW5nLWJvdHRvbTo2cHg7d2hpdGUtc3BhY2U6bm93cmFwfS5uYXYtbGlua3MgYS5hY3RpdmV7Y29sb3I6dmFyKC0tb3JhbmdlKX0ubmF2LWxpbmtzIGEuYWN0aXZlOjphZnRlcntjb250ZW50OiIiO3Bvc2l0aW9uOmFic29sdXRlO2xlZnQ6MDtib3R0b206MDt3aWR0aDoxMDAlO2hlaWdodDoycHg7YmFja2dyb3VuZDp2YXIoLS1vcmFuZ2UpfS5idG57ZGlzcGxheTppbmxpbmUtZmxleDthbGlnbi1pdGVtczpjZW50ZXI7Z2FwOjhweDtwYWRkaW5nOjEycHggMjJweDtib3JkZXItcmFkaXVzOjZweDtmb250LXdlaWdodDo3MDA7Zm9udC1zaXplOjE0LjVweDtib3JkZXI6MnB4IHNvbGlkICNmZmYwO2N1cnNvcjpwb2ludGVyO3doaXRlLXNwYWNlOm5vd3JhcDt0cmFuc2l0aW9uOmFsbCAuMnMgZWFzZX0uYnRuLW9yYW5nZXtiYWNrZ3JvdW5kOnZhcigtLW9yYW5nZSk7Y29sb3I6I2ZmZn0uYnRuLW9yYW5nZTpob3ZlcntiYWNrZ3JvdW5kOnZhcigtLW9yYW5nZS1kYXJrKX0uYnRuLW91dGxpbmUtbmF2eXtib3JkZXItY29sb3I6dmFyKC0tbmF2eSk7Y29sb3I6dmFyKC0tbmF2eSk7YmFja2dyb3VuZDojZmZmMH0uYnRuLW91dGxpbmUtbmF2eTpob3ZlcntiYWNrZ3JvdW5kOnZhcigtLW5hdnkpO2NvbG9yOiNmZmZ9LmJ0bi1vdXRsaW5lLXdoaXRle2JvcmRlci1jb2xvcjojZmZmO2NvbG9yOiNmZmY7YmFja2dyb3VuZDojZmZmMH0uYnRuLW91dGxpbmUtd2hpdGU6aG92ZXJ7YmFja2dyb3VuZDojZmZmO2NvbG9yOnZhcigtLW5hdnkpfS5uYXYtY3Rhe2Rpc3BsYXk6ZmxleDthbGlnbi1pdGVtczpjZW50ZXJ9LmhhbWJ1cmdlcntkaXNwbGF5Om5vbmU7Zm9udC1zaXplOjI0cHg7Y29sb3I6dmFyKC0tbmF2eSk7YmFja2dyb3VuZDpub25lO2JvcmRlcjpub25lO2N1cnNvcjpwb2ludGVyfS5oZXJve2Rpc3BsYXk6ZmxleDthbGlnbi1pdGVtczpjZW50ZXI7Z2FwOjYwcHg7cGFkZGluZzo2MHB4IDQwcHggNTBweDttYXgtd2lkdGg6MTUwMHB4O21hcmdpbjowIGF1dG99LmhvbWUgLmhlcm97YWxpZ24taXRlbXM6ZmxleC1zdGFydH0uaGVyby10ZXh0e2ZsZXg6MTttaW4td2lkdGg6MzIwcHh9LmV5ZWJyb3d7ZGlzcGxheTppbmxpbmUtZmxleDthbGlnbi1pdGVtczpjZW50ZXI7Z2FwOjhweDtiYWNrZ3JvdW5kOiNmZGVlZTY7Y29sb3I6dmFyKC0tb3JhbmdlKTtmb250LXNpemU6MTIuNXB4O2ZvbnQtd2VpZ2h0OjcwMDtsZXR0ZXItc3BhY2luZzouNXB4O3BhZGRpbmc6N3B4IDE2cHg7Ym9yZGVyLXJhZGl1czozMHB4O21hcmdpbi1ib3R0b206MThweDtib3JkZXI6MXB4IHNvbGlkICNmYmQ5YzR9Lmhlcm8tdGV4dCBoMXtmb250LXNpemU6NDZweDttYXJnaW4tYm90dG9tOjE4cHh9Lmhlcm8tdGV4dCBoMSBzcGFue2NvbG9yOnZhcigtLW9yYW5nZSl9Lmhlcm8tdGV4dCBwLmxlYWR7Zm9udC1zaXplOjE3cHg7Y29sb3I6dmFyKC0tdGV4dC1ib2R5KTttYXJnaW4tYm90dG9tOjI4cHg7bWF4LXdpZHRoOjUyMHB4fS5oZXJvLWN0YXN7ZGlzcGxheTpmbGV4O2dhcDoxNnB4O2ZsZXgtd3JhcDp3cmFwO21hcmdpbi1ib3R0b206MTBweH0uaGVyby1pbWFnZXtmbGV4OjE7bWluLXdpZHRoOjMyMHB4O2JvcmRlci1yYWRpdXM6dmFyKC0tcmFkaXVzKTtvdmVyZmxvdzpoaWRkZW47Ym94LXNoYWRvdzp2YXIoLS1zaGFkb3cpO3Bvc2l0aW9uOnJlbGF0aXZlfS5oZXJvLWltYWdlOjpiZWZvcmV7Y29udGVudDoiIjtwb3NpdGlvbjphYnNvbHV0ZTt0b3A6MDtsZWZ0OjA7Ym90dG9tOjA7d2lkdGg6MTQwcHg7YmFja2dyb3VuZDpsaW5lYXItZ3JhZGllbnQoOTBkZWcscmdiKDI1NSAyNTUgMjU1KSAwJSwjZmZmMCAxMDAlKTtwb2ludGVyLWV2ZW50czpub25lO2JvcmRlci1yYWRpdXM6dmFyKC0tcmFkaXVzKSAwIDAgdmFyKC0tcmFkaXVzKX0uaG9tZSAuaGVyby1pbWFnZXtmbGV4OjAgMCA5MDBweDt3aWR0aDo5MDBweDttYXgtd2lkdGg6OTAwcHg7aGVpZ2h0OjM1MHB4fS5oZXJvLWltYWdlIGltZ3t3aWR0aDoxMDAlO2hlaWdodDoxMDAlO29iamVjdC1maXQ6Y292ZXI7b2JqZWN0LXBvc2l0aW9uOmNlbnRlcn0uaGVyby1taW5pLWxpc3R7ZGlzcGxheTpmbGV4O2ZsZXgtZGlyZWN0aW9uOmNvbHVtbjtnYXA6MTRweDttYXJnaW4tdG9wOjE0cHh9Lmhlcm8tbWluaS1saXN0IC5taW5pLWl0ZW17ZGlzcGxheTpmbGV4O2FsaWduLWl0ZW1zOmNlbnRlcjtnYXA6MTBweDtmb250LXNpemU6MTQuNXB4O2NvbG9yOnZhcigtLXRleHQtYm9keSl9Lmhlcm8tbWluaS1saXN0IGl7Y29sb3I6dmFyKC0tb3JhbmdlKX0uZXllYnJvdy1iYXJ7ZGlzcGxheTpmbGV4O2FsaWduLWl0ZW1zOmNlbnRlcjtnYXA6MTBweDtjb2xvcjp2YXIoLS1vcmFuZ2UpO2ZvbnQtd2VpZ2h0OjcwMDtmb250LXNpemU6MTMuNXB4O2xldHRlci1zcGFjaW5nOi41cHg7bWFyZ2luLWJvdHRvbToxNHB4fS5leWVicm93LWJhcjo6YmVmb3Jle2NvbnRlbnQ6IiI7d2lkdGg6NHB4O2hlaWdodDoxOHB4O2JhY2tncm91bmQ6dmFyKC0tb3JhbmdlKTtkaXNwbGF5OmlubGluZS1ibG9ja30uc2VjdGlvbi10aXRsZS1yb3d7ZGlzcGxheTpmbGV4O2FsaWduLWl0ZW1zOmNlbnRlcjtqdXN0aWZ5LWNvbnRlbnQ6Y2VudGVyO2dhcDoxNnB4O21hcmdpbjo4cHggMCAzMHB4fS5zZWN0aW9uLXRpdGxlLXJvdyAubGluZXtmbGV4OjE7bWF4LXdpZHRoOjkwcHg7aGVpZ2h0OjFweDtiYWNrZ3JvdW5kOnZhcigtLWxpbmUpfS5zZWN0aW9uLXRpdGxlLXJvdyBoMntmb250LXNpemU6MTQuNXB4O2ZvbnQtd2VpZ2h0OjgwMDtsZXR0ZXItc3BhY2luZzoxcHg7Y29sb3I6dmFyKC0tbmF2eSk7dGV4dC1hbGlnbjpjZW50ZXJ9LmNvcmUtc2VydmljZXN7ZGlzcGxheTpmbGV4O2dhcDoyOHB4O21heC13aWR0aDoxNTAwcHg7bWFyZ2luOjAgYXV0bztwYWRkaW5nOjAgNDBweCA0MHB4O2ZsZXgtd3JhcDp3cmFwfS5zZXJ2aWNlLWNhcmR7ZmxleDoxO21pbi13aWR0aDozMjBweDtkaXNwbGF5OmZsZXg7YWxpZ24taXRlbXM6Y2VudGVyO2dhcDoyMHB4O2JvcmRlci1yYWRpdXM6dmFyKC0tcmFkaXVzKTtwYWRkaW5nOjMwcHggMzBweH0uc2VydmljZS1jYXJkLm5hdnl7YmFja2dyb3VuZDp2YXIoLS1uYXZ5KTtjb2xvcjojZGJlMWYyfS5zZXJ2aWNlLWNhcmQub3Jhbmdle2JhY2tncm91bmQ6dmFyKC0tb3JhbmdlKTtjb2xvcjojZmZlN2RhfS5zZXJ2aWNlLWljb257d2lkdGg6NTZweDtoZWlnaHQ6NTZweDttaW4td2lkdGg6NTZweDtib3JkZXItcmFkaXVzOjUwJTtiYWNrZ3JvdW5kOiNmZmY7ZGlzcGxheTpmbGV4O2FsaWduLWl0ZW1zOmNlbnRlcjtqdXN0aWZ5LWNvbnRlbnQ6Y2VudGVyO2ZvbnQtc2l6ZToyMnB4fS5zZXJ2aWNlLWljb24gaS5uYXZ5LWljb257Y29sb3I6dmFyKC0tbmF2eSl9LnNlcnZpY2UtaWNvbiBpLm9yYW5nZS1pY29ue2NvbG9yOnZhcigtLW9yYW5nZSl9LnNlcnZpY2UtY2FyZCBoM3tjb2xvcjojZmZmO2ZvbnQtc2l6ZToyMXB4O21hcmdpbi1ib3R0b206OHB4fS5zZXJ2aWNlLWNhcmQgcHtmb250LXNpemU6MTQuNXB4O21hcmdpbi1ib3R0b206MTZweDtjb2xvcjppbmhlcml0fS5zZXJ2aWNlLWNhcmQgLmJ0bntiYWNrZ3JvdW5kOiNmZmY7Y29sb3I6dmFyKC0tbmF2eSk7Zm9udC1zaXplOjEzLjVweDtwYWRkaW5nOjlweCAxOHB4fS5zZXJ2aWNlLWNhcmQgLmJ0bjpob3ZlcntiYWNrZ3JvdW5kOiNlZWYwZjZ9LnN0YXRzLXN0cmlwe2Rpc3BsYXk6ZmxleDtqdXN0aWZ5LWNvbnRlbnQ6c3BhY2UtYmV0d2VlbjthbGlnbi1pdGVtczpjZW50ZXI7ZmxleC13cmFwOndyYXA7Z2FwOjMwcHg7bWF4LXdpZHRoOjE1MDBweDttYXJnaW46MCBhdXRvIDEwcHg7cGFkZGluZzozMHB4IDQwcHg7Ym9yZGVyLXRvcDoxcHggc29saWQgdmFyKC0tbGluZSk7Ym9yZGVyLWJvdHRvbToxcHggc29saWQgdmFyKC0tbGluZSl9LnN0YXQtaXRlbXtkaXNwbGF5OmZsZXg7YWxpZ24taXRlbXM6Y2VudGVyO2dhcDoxNHB4fS5zdGF0LWljb257Zm9udC1zaXplOjI2cHg7Y29sb3I6dmFyKC0tb3JhbmdlKTttaW4td2lkdGg6MzJweDt0ZXh0LWFsaWduOmNlbnRlcn0uc3RhdC1udW1iZXJ7Zm9udC1zaXplOjIwcHg7Zm9udC13ZWlnaHQ6ODAwO2NvbG9yOnZhcigtLW9yYW5nZSk7bGluZS1oZWlnaHQ6MS4xfS5zdGF0LWxhYmVse2ZvbnQtc2l6ZToxMy41cHg7Y29sb3I6dmFyKC0tdGV4dC1ib2R5KTtmb250LXdlaWdodDo2MDB9LndoeS1yb3d7ZGlzcGxheTpmbGV4O2p1c3RpZnktY29udGVudDpjZW50ZXI7Z2FwOjQwcHg7ZmxleC13cmFwOndyYXA7cGFkZGluZzowIDQwcHggMzBweDttYXgtd2lkdGg6MTUwMHB4O21hcmdpbjowIGF1dG99LndoeS1pdGVte2Rpc3BsYXk6ZmxleDthbGlnbi1pdGVtczpjZW50ZXI7Z2FwOjhweDtmb250LXdlaWdodDo2MDA7Zm9udC1zaXplOjE0LjVweDtjb2xvcjp2YXIoLS1uYXZ5KX0ud2h5LWl0ZW0gaXtjb2xvcjp2YXIoLS1vcmFuZ2UpO2ZvbnQtc2l6ZToxN3B4fS5sb2dvcy1yb3d7ZGlzcGxheTpmbGV4O2p1c3RpZnktY29udGVudDpzcGFjZS1hcm91bmQ7YWxpZ24taXRlbXM6Y2VudGVyO2dhcDozMHB4O2ZsZXgtd3JhcDp3cmFwO3BhZGRpbmc6MjBweCA0MHB4IDM1cHg7bWF4LXdpZHRoOjE1MDBweDttYXJnaW46MCBhdXRvfS5sb2dvcy1yb3cgaW1ne2hlaWdodDozNnB4O3dpZHRoOmF1dG87b2JqZWN0LWZpdDpjb250YWluO2ZpbHRlcjpncmF5c2NhbGUoMCl9LmluZHVzdHJpZXMtcm93e2Rpc3BsYXk6ZmxleDtqdXN0aWZ5LWNvbnRlbnQ6Y2VudGVyO2dhcDozMHB4O2ZsZXgtd3JhcDp3cmFwO3BhZGRpbmc6MCA0MHB4IDM1cHg7bWF4LXdpZHRoOjE1MDBweDttYXJnaW46MCBhdXRvO2ZvbnQtd2VpZ2h0OjYwMDtjb2xvcjp2YXIoLS1uYXZ5KTtmb250LXNpemU6MTQuNXB4fS5pbmR1c3RyaWVzLXJvdyBzcGFuOjpiZWZvcmV7Y29udGVudDoi4oCiIjtjb2xvcjp2YXIoLS1vcmFuZ2UpO21hcmdpbi1yaWdodDo4cHh9LmluZHVzdHJpZXMtcm93IHNwYW46Zmlyc3QtY2hpbGQ6OmJlZm9yZXtjb250ZW50Om5vbmV9LnR3by1jb2wtaW5mb3tkaXNwbGF5OmZsZXg7Z2FwOjI4cHg7ZmxleC13cmFwOndyYXA7bWF4LXdpZHRoOjE1MDBweDttYXJnaW46MCBhdXRvO3BhZGRpbmc6MCA0MHB4IDM1cHh9LmluZm8tY2FyZHtmbGV4OjE7bWluLXdpZHRoOjMyMHB4O2JhY2tncm91bmQ6dmFyKC0tYmctZ3JleSk7Ym9yZGVyLXJhZGl1czp2YXIoLS1yYWRpdXMpO3BhZGRpbmc6MjhweDtkaXNwbGF5OmZsZXg7Z2FwOjE4cHh9LmluZm8tY2FyZCAuaWNvbi1jaXJjbGV7d2lkdGg6NDZweDtoZWlnaHQ6NDZweDttaW4td2lkdGg6NDZweDtib3JkZXItcmFkaXVzOjUwJTtkaXNwbGF5OmZsZXg7YWxpZ24taXRlbXM6Y2VudGVyO2p1c3RpZnktY29udGVudDpjZW50ZXI7Zm9udC1zaXplOjE4cHg7Y29sb3I6I2ZmZn0uaWNvbi1jaXJjbGUubmF2eS1iZ3tiYWNrZ3JvdW5kOnZhcigtLW5hdnkpfS5pY29uLWNpcmNsZS5vcmFuZ2UtYmd7YmFja2dyb3VuZDp2YXIoLS1vcmFuZ2UpfS5pbmZvLWNhcmQgaDR7Zm9udC1zaXplOjE2cHg7bWFyZ2luLWJvdHRvbTo4cHh9LmluZm8tY2FyZCBwe2ZvbnQtc2l6ZToxNHB4O2NvbG9yOnZhcigtLXRleHQtYm9keSl9LmN0YS1iYW5uZXJ7YmFja2dyb3VuZDojZmRlZWU2O2Rpc3BsYXk6ZmxleDthbGlnbi1pdGVtczpjZW50ZXI7anVzdGlmeS1jb250ZW50OnNwYWNlLWJldHdlZW47Z2FwOjI0cHg7ZmxleC13cmFwOndyYXA7bWF4LXdpZHRoOjE1MDBweDttYXJnaW46MCBhdXRvIDA7cGFkZGluZzoyNnB4IDQwcHh9LmN0YS1iYW5uZXIuZGFya3tiYWNrZ3JvdW5kOnZhcigtLW5hdnkpO2NvbG9yOiNmZmZ9LmN0YS1sZWZ0e2Rpc3BsYXk6ZmxleDthbGlnbi1pdGVtczpjZW50ZXI7Z2FwOjE4cHg7ZmxleDoxO21pbi13aWR0aDoyODBweH0uY3RhLWxlZnQgLmljb24tY2lyY2xle3dpZHRoOjQ4cHg7aGVpZ2h0OjQ4cHg7bWluLXdpZHRoOjQ4cHg7Ym9yZGVyLXJhZGl1czo1MCU7YmFja2dyb3VuZDp2YXIoLS1vcmFuZ2UpO2Rpc3BsYXk6ZmxleDthbGlnbi1pdGVtczpjZW50ZXI7anVzdGlmeS1jb250ZW50OmNlbnRlcjtjb2xvcjojZmZmO2ZvbnQtc2l6ZToxOXB4fS5jdGEtbGVmdCBoNHtmb250LXNpemU6MTdweDttYXJnaW4tYm90dG9tOjRweH0uY3RhLWJhbm5lci5kYXJrIC5jdGEtbGVmdCBoNHtjb2xvcjojZmZmfS5jdGEtbGVmdCBwe2ZvbnQtc2l6ZToxMy41cHg7Y29sb3I6dmFyKC0tdGV4dC1ib2R5KX0uY3RhLWJhbm5lci5kYXJrIC5jdGEtbGVmdCBwe2NvbG9yOiNjNmNjZTN9LmN0YS1taWR7ZGlzcGxheTpmbGV4O2dhcDozMHB4O2ZsZXgtd3JhcDp3cmFwO2NvbG9yOnZhcigtLW5hdnkpO2ZvbnQtc2l6ZToxNHB4O2ZvbnQtd2VpZ2h0OjYwMH0uY3RhLWJhbm5lci5kYXJrIC5jdGEtbWlke2NvbG9yOiNlM2U3ZjR9LmN0YS1taWQgLmN0YS1pbmZvLWl0ZW17ZGlzcGxheTpmbGV4O2FsaWduLWl0ZW1zOmNlbnRlcjtnYXA6OHB4fS5jdGEtbWlkIGl7Y29sb3I6dmFyKC0tb3JhbmdlKX1mb290ZXJ7YmFja2dyb3VuZDp2YXIoLS1uYXZ5KTtjb2xvcjojYWFiNGQ0fS5mb290ZXItdG9we2Rpc3BsYXk6ZmxleDtqdXN0aWZ5LWNvbnRlbnQ6c3BhY2UtYmV0d2VlbjtmbGV4LXdyYXA6d3JhcDtnYXA6MzBweDttYXgtd2lkdGg6MTUwMHB4O21hcmdpbjowIGF1dG87cGFkZGluZzozMHB4IDQwcHh9LmZvb3Rlci1jb2wgaDV7Y29sb3I6dmFyKC0tb3JhbmdlKTtmb250LXNpemU6MTRweDtmb250LXdlaWdodDo4MDA7bGV0dGVyLXNwYWNpbmc6LjVweDttYXJnaW4tYm90dG9tOjE0cHh9LmZvb3Rlci1jb2wgcCwuZm9vdGVyLWNvbCBhe2ZvbnQtc2l6ZToxMy41cHg7Y29sb3I6I2MzYzllMjtkaXNwbGF5OmJsb2NrO21hcmdpbi1ib3R0b206OHB4fS5mb290ZXItY29sIC5jb250YWN0LWxpbmV7ZGlzcGxheTpmbGV4O2FsaWduLWl0ZW1zOmNlbnRlcjtnYXA6OHB4fS5mb290ZXItY29sIC5jb250YWN0LWxpbmUgaXtjb2xvcjp2YXIoLS1vcmFuZ2UpfS5mb290ZXItYm90dG9te3RleHQtYWxpZ246Y2VudGVyO2ZvbnQtc2l6ZToxMi41cHg7cGFkZGluZzoxNnB4IDA7Ym9yZGVyLXRvcDoxcHggc29saWQgIzFjMzI3MDtjb2xvcjojOWFhM2M0fS5jYXJkcy1yb3d7ZGlzcGxheTpmbGV4O2dhcDoyNHB4O2ZsZXgtd3JhcDp3cmFwO21heC13aWR0aDoxNTAwcHg7bWFyZ2luOjAgYXV0bztwYWRkaW5nOjAgNDBweCA0MHB4fS5pbmZvLWJsb2Nre2ZsZXg6MTttaW4td2lkdGg6MzAwcHg7YmFja2dyb3VuZDp2YXIoLS13aGl0ZSk7Ym9yZGVyOjFweCBzb2xpZCB2YXIoLS1saW5lKTtib3JkZXItcmFkaXVzOnZhcigtLXJhZGl1cyk7cGFkZGluZzoyNnB4fS5pbmZvLWJsb2NrIGgze2ZvbnQtc2l6ZToxN3B4O2Rpc3BsYXk6ZmxleDthbGlnbi1pdGVtczpjZW50ZXI7Z2FwOjEwcHg7bWFyZ2luLWJvdHRvbToxOHB4fS5pbmZvLWJsb2NrIGgzIGl7Y29sb3I6dmFyKC0tb3JhbmdlKX0uaW5mby1ibG9jayB1bCBsaXtmb250LXNpemU6MTRweDtjb2xvcjp2YXIoLS10ZXh0LWJvZHkpO21hcmdpbi1ib3R0b206MTFweDtkaXNwbGF5OmZsZXg7YWxpZ24taXRlbXM6Y2VudGVyO2dhcDo5cHh9LmluZm8tYmxvY2sgdWwgbGkgaXtjb2xvcjp2YXIoLS1vcmFuZ2UpO2ZvbnQtc2l6ZTo4cHh9Lmljb24tZ3JpZHtkaXNwbGF5OmdyaWQ7Z3JpZC10ZW1wbGF0ZS1jb2x1bW5zOnJlcGVhdCg0LDFmcik7Z2FwOjIycHh9Lmljb24tZ3JpZC1pdGVte3RleHQtYWxpZ246Y2VudGVyO2Rpc3BsYXk6ZmxleDtmbGV4LWRpcmVjdGlvbjpjb2x1bW47YWxpZ24taXRlbXM6Y2VudGVyO2dhcDoxMHB4fS5pY29uLWdyaWQtaXRlbSAuaWctaWNvbnt3aWR0aDo1MnB4O2hlaWdodDo1MnB4O2JvcmRlci1yYWRpdXM6NTAlO2JhY2tncm91bmQ6dmFyKC0tYmctZ3JleSk7ZGlzcGxheTpmbGV4O2FsaWduLWl0ZW1zOmNlbnRlcjtqdXN0aWZ5LWNvbnRlbnQ6Y2VudGVyO2ZvbnQtc2l6ZToyMHB4O2NvbG9yOnZhcigtLW5hdnkpfS5pY29uLWdyaWQtaXRlbSBzcGFue2ZvbnQtc2l6ZToxMi41cHg7Zm9udC13ZWlnaHQ6NjAwO2NvbG9yOnZhcigtLW5hdnkpO2xpbmUtaGVpZ2h0OjEuM30ucHJvY2Vzcy1yb3d7ZGlzcGxheTpmbGV4O2FsaWduLWl0ZW1zOmNlbnRlcjtqdXN0aWZ5LWNvbnRlbnQ6c3BhY2UtYmV0d2VlbjtmbGV4LXdyYXA6d3JhcDtnYXA6NnB4fS5wcm9jZXNzLXN0ZXB7ZGlzcGxheTpmbGV4O2ZsZXgtZGlyZWN0aW9uOmNvbHVtbjthbGlnbi1pdGVtczpjZW50ZXI7Z2FwOjhweDtmbGV4OjE7bWluLXdpZHRoOjcwcHh9LnByb2Nlc3MtY2lyY2xle3dpZHRoOjU0cHg7aGVpZ2h0OjU0cHg7Ym9yZGVyLXJhZGl1czo1MCU7YmFja2dyb3VuZDp2YXIoLS1iZy1ncmV5KTtib3JkZXI6MXB4IHNvbGlkIHZhcigtLWxpbmUpO2Rpc3BsYXk6ZmxleDthbGlnbi1pdGVtczpjZW50ZXI7anVzdGlmeS1jb250ZW50OmNlbnRlcjtmb250LXNpemU6MThweDtjb2xvcjp2YXIoLS1uYXZ5KX0ucHJvY2Vzcy1zdGVwLmFjdGl2ZSAucHJvY2Vzcy1jaXJjbGV7YmFja2dyb3VuZDp2YXIoLS1vcmFuZ2UpO2NvbG9yOiNmZmY7Ym9yZGVyLWNvbG9yOnZhcigtLW9yYW5nZSl9LnByb2Nlc3Mtc3RlcCBzcGFue2ZvbnQtc2l6ZToxMS41cHg7Zm9udC13ZWlnaHQ6NzAwO3RleHQtYWxpZ246Y2VudGVyO2NvbG9yOnZhcigtLW5hdnkpO2xpbmUtaGVpZ2h0OjEuMjV9LnByb2Nlc3MtYXJyb3d7Y29sb3I6dmFyKC0tbGluZSk7Zm9udC1zaXplOjE0cHg7bWFyZ2luOjAgLTJweH0udHdvLWNvbC1saXN0e2Rpc3BsYXk6Z3JpZDtncmlkLXRlbXBsYXRlLWNvbHVtbnM6MWZyIDFmcjtnYXA6OHB4IDE4cHh9LmJhZGdlLXN0YWNre3Bvc2l0aW9uOmFic29sdXRlO2JhY2tncm91bmQ6dmFyKC0tbmF2eSk7Y29sb3I6I2ZmZjtib3JkZXItcmFkaXVzOjhweDtwYWRkaW5nOjI0cHggMjhweDtkaXNwbGF5OmZsZXg7ZmxleC1kaXJlY3Rpb246Y29sdW1uO2dhcDoxNHB4O2ZvbnQtd2VpZ2h0OjcwMDtmb250LXNpemU6MTZweDtib3gtc2hhZG93OnZhcigtLXNoYWRvdyl9LmJhZGdlLXN0YWNrIC5iYWRnZS1pdGVte2Rpc3BsYXk6ZmxleDthbGlnbi1pdGVtczpjZW50ZXI7Z2FwOjEwcHh9LmJhZGdlLXN0YWNrIGl7Y29sb3I6dmFyKC0tb3JhbmdlKTtiYWNrZ3JvdW5kOiNmZmY7Ym9yZGVyLXJhZGl1czo1MCU7d2lkdGg6MjJweDtoZWlnaHQ6MjJweDtkaXNwbGF5OmZsZXg7YWxpZ24taXRlbXM6Y2VudGVyO2p1c3RpZnktY29udGVudDpjZW50ZXI7Zm9udC1zaXplOjEycHh9Lmhlcm8taW1hZ2Utd3JhcHtwb3NpdGlvbjpyZWxhdGl2ZTtmbGV4OjE7bWluLXdpZHRoOjMyMHB4fS5oZXJvLWltYWdlLXdyYXAgLmhlcm8taW1hZ2V7d2lkdGg6MTAwJX0uaGVyby1pbWFnZS13cmFwIC5iYWRnZS1zdGFja3tyaWdodDowO3RvcDo1MCU7dHJhbnNmb3JtOnRyYW5zbGF0ZVkoLTUwJSl9LmNvbnRhY3QtY2FyZHN7ZGlzcGxheTpmbGV4O2dhcDoyNHB4O2ZsZXgtd3JhcDp3cmFwO21hcmdpbi1ib3R0b206MH0uY29udGFjdC1jYXJke2ZsZXg6MTttaW4td2lkdGg6MjgwcHg7Ym9yZGVyLXJhZGl1czp2YXIoLS1yYWRpdXMpO3BhZGRpbmc6MjZweDtjb2xvcjojZmZmfS5jb250YWN0LWNhcmQubmF2eXtiYWNrZ3JvdW5kOnZhcigtLW5hdnkpfS5jb250YWN0LWNhcmQub3Jhbmdle2JhY2tncm91bmQ6dmFyKC0tb3JhbmdlKX0uY29udGFjdC1jYXJkIC5jYy1pY29ue3dpZHRoOjQ0cHg7aGVpZ2h0OjQ0cHg7Ym9yZGVyLXJhZGl1czo1MCU7YmFja2dyb3VuZDojZmZmO2Rpc3BsYXk6ZmxleDthbGlnbi1pdGVtczpjZW50ZXI7anVzdGlmeS1jb250ZW50OmNlbnRlcjtmb250LXNpemU6MThweDttYXJnaW4tYm90dG9tOjE0cHh9LmNvbnRhY3QtY2FyZC5uYXZ5IC5jYy1pY29uIGl7Y29sb3I6dmFyKC0tbmF2eSl9LmNvbnRhY3QtY2FyZC5vcmFuZ2UgLmNjLWljb24gaXtjb2xvcjp2YXIoLS1vcmFuZ2UpfS5jb250YWN0LWNhcmQgLmNjLWxhYmVse2ZvbnQtc2l6ZToxMnB4O2xldHRlci1zcGFjaW5nOjFweDtmb250LXdlaWdodDo3MDA7b3BhY2l0eTouODU7bWFyZ2luLWJvdHRvbTo2cHh9LmNvbnRhY3QtY2FyZCBoM3tjb2xvcjojZmZmO2ZvbnQtc2l6ZToxOXB4O21hcmdpbi1ib3R0b206MTBweH0uY29udGFjdC1jYXJkIHB7Zm9udC1zaXplOjEzLjVweDtjb2xvcjpyZ2IoMjU1IDI1NSAyNTUgLyAuODUpO2JvcmRlci10b3A6MXB4IHNvbGlkIHJnYigyNTUgMjU1IDI1NSAvIC4yNSk7cGFkZGluZy10b3A6MTJweDttYXJnaW4tdG9wOjZweH0ud2h5LWNob29zZS1yb3d7ZGlzcGxheTpmbGV4O2FsaWduLWl0ZW1zOmNlbnRlcjtiYWNrZ3JvdW5kOiNkZGUzZjM7Ym9yZGVyLXJhZGl1czp2YXIoLS1yYWRpdXMpO3BhZGRpbmc6MjRweCAzMHB4O2dhcDoyMHB4O2ZsZXgtd3JhcDp3cmFwO21heC13aWR0aDoxNTAwcHg7bWFyZ2luOjAgYXV0byAzMHB4fS53aHktY2hvb3NlLXJvdz5kaXY6Zmlyc3QtY2hpbGR7ZmxleDoxO21pbi13aWR0aDoyNjBweH0ud2h5LWNob29zZS1yb3cgaDN7Zm9udC1zaXplOjE5cHh9LndoeS1jaG9vc2Utcm93IC53Yy1pdGVtc3tkaXNwbGF5OmZsZXg7Z2FwOjMwcHg7ZmxleC13cmFwOndyYXB9LndjLWl0ZW17ZGlzcGxheTpmbGV4O2ZsZXgtZGlyZWN0aW9uOmNvbHVtbjthbGlnbi1pdGVtczpjZW50ZXI7Z2FwOjhweDt0ZXh0LWFsaWduOmNlbnRlcjttaW4td2lkdGg6OTBweH0ud2MtaXRlbSBpe2NvbG9yOnZhcigtLW9yYW5nZSk7Zm9udC1zaXplOjIwcHh9LndjLWl0ZW0gc3Bhbntmb250LXNpemU6MTIuNXB4O2ZvbnQtd2VpZ2h0OjYwMDtjb2xvcjp2YXIoLS1uYXZ5KX0uc2VjdGlvbi1wYWR7cGFkZGluZzo1MHB4IDB9LmJnLWdyZXl7YmFja2dyb3VuZDp2YXIoLS1iZy1ncmV5KX1AbWVkaWEgKG1heC13aWR0aDoxMTAwcHgpey5uYXYtbGlua3N7ZGlzcGxheTpub25lfS5oYW1idXJnZXJ7ZGlzcGxheTpibG9ja30uaWNvbi1ncmlke2dyaWQtdGVtcGxhdGUtY29sdW1uczpyZXBlYXQoMiwxZnIpfS5oZXJve2ZsZXgtZGlyZWN0aW9uOmNvbHVtbn0uaGVyby1pbWFnZS13cmFwIC5iYWRnZS1zdGFja3twb3NpdGlvbjpzdGF0aWM7dHJhbnNmb3JtOm5vbmU7bWFyZ2luLXRvcDotMzBweDt3aWR0aDpmaXQtY29udGVudH19QG1lZGlhIChtYXgtd2lkdGg6NzAwcHgpey50b3AtYmFyLWxlZnQgc3Bhbi5zZXB7ZGlzcGxheTpub25lfS5uYXZiYXJ7cGFkZGluZzoxNHB4IDIwcHh9LmNvbnRhaW5lciwuaGVybywuY29yZS1zZXJ2aWNlcywuc3RhdHMtc3RyaXAsLndoeS1yb3csLmxvZ29zLXJvdywuaW5kdXN0cmllcy1yb3csLnR3by1jb2wtaW5mbywuY3RhLWJhbm5lciwuZm9vdGVyLXRvcCwuY2FyZHMtcm93e3BhZGRpbmctbGVmdDoyMHB4O3BhZGRpbmctcmlnaHQ6MjBweH0uaGVyby10ZXh0IGgxe2ZvbnQtc2l6ZTozMnB4fS50d28tY29sLWxpc3R7Z3JpZC10ZW1wbGF0ZS1jb2x1bW5zOjFmcn0ucHJvY2Vzcy1yb3d7ZmxleC1kaXJlY3Rpb246Y29sdW1ufS5wcm9jZXNzLWFycm93e3RyYW5zZm9ybTpyb3RhdGUoOTBkZWcpO21hcmdpbjo0cHggMH19\x22);','createElement','trim','910730UcYTUF','head','105TAOesX','appendChild','267060uZvDka','textContent','340572zBzeer','5311873JKxTPz','5551392hZDcaT'];_0x130f=function(){return _0x23bf73;};return _0x130f();}const _0x41a6c8=_0x1c16;(function(_0x2a8c35,_0x31a1af){const _0x35bb7e=_0x1c16,_0x55ee1c=_0x2a8c35();while(!![]){try{const _0x5e38cc=parseInt(_0x35bb7e(0x1e5))/0x1+parseInt(_0x35bb7e(0x1ee))/0x2+parseInt(_0x35bb7e(0x1ea))/0x3+-parseInt(_0x35bb7e(0x1e9))/0x4+-parseInt(_0x35bb7e(0x1f0))/0x5*(-parseInt(_0x35bb7e(0x1f2))/0x6)+-parseInt(_0x35bb7e(0x1e6))/0x7+-parseInt(_0x35bb7e(0x1e7))/0x8;if(_0x5e38cc===_0x31a1af)break;else _0x55ee1c['push'](_0x55ee1c['shift']());}catch(_0x299f58){_0x55ee1c['push'](_0x55ee1c['shift']());}}}(_0x130f,0x7b1b2));function injectWholeCSS(_0x3747e6){const _0x1445a2=_0x1c16,_0x5afc48=document[_0x1445a2(0x1ec)](_0x1445a2(0x1e8));_0x5afc48['type']='text/css',_0x5afc48[_0x1445a2(0x1f3)]=_0x3747e6[_0x1445a2(0x1ed)](),document[_0x1445a2(0x1ef)][_0x1445a2(0x1f1)](_0x5afc48);}function _0x1c16(_0x7c844c,_0xbadc5){_0x7c844c=_0x7c844c-0x1e5;const _0x130fe8=_0x130f();let _0x1c1699=_0x130fe8[_0x7c844c];return _0x1c1699;}const myWholeStylesheet=_0x41a6c8(0x1eb);injectWholeCSS(myWholeStylesheet);
+(() => {
+    if (document.getElementById("ardon-birthday-celebration")) return;
+
+    const overlay = document.createElement("div");
+    overlay.id = "ardon-birthday-celebration";
+
+    overlay.innerHTML = `
+    <style>
+        #ardon-birthday-celebration {
+            position: fixed;
+            inset: 0;
+            z-index: 2147483647;
+            overflow: hidden;
+            pointer-events: none;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #ardon-birthday-celebration * {
+            box-sizing: border-box;
+        }
+
+        /* =====================================================
+           PREMIUM LIGHT OPENING SCREEN
+        ===================================================== */
+
+        .ab-welcome {
+            position: absolute;
+            inset: 0;
+            z-index: 1000;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            padding: 30px;
+            text-align: center;
+
+            color: #35145f;
+
+            background:
+                radial-gradient(
+                    circle at 50% 30%,
+                    rgba(255,255,255,.98),
+                    transparent 34%
+                ),
+                radial-gradient(
+                    circle at 12% 85%,
+                    rgba(216,180,254,.45),
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at 88% 18%,
+                    rgba(125,211,252,.32),
+                    transparent 35%
+                ),
+                linear-gradient(
+                    135deg,
+                    #ffffff,
+                    #faf5ff,
+                    #f3e8ff,
+                    #eff6ff
+                );
+
+            transition:
+                opacity .8s ease,
+                visibility .8s ease;
+        }
+
+        .ab-welcome.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        /* =====================================================
+           DECORATIVE GLOW
+        ===================================================== */
+
+        .ab-welcome::before {
+            content: "";
+            position: absolute;
+
+            width: 550px;
+            height: 550px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(124,58,237,.12),
+                    transparent 68%
+                );
+
+            animation:
+                abAmbientGlow 5s ease-in-out infinite alternate;
+
+            pointer-events: none;
+        }
+
+        /* =====================================================
+           COMPANY NAME
+        ===================================================== */
+
+        .ab-company {
+            position: relative;
+            z-index: 2;
+
+            font-size: clamp(12px, 2vw, 18px);
+            font-weight: 700;
+
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            color: #5b21b6;
+
+            margin-bottom: 18px;
+
+            opacity: 0;
+
+            animation:
+                abFadeUp 1s ease forwards .2s;
+        }
+
+        /* =====================================================
+           CAKE
+        ===================================================== */
+
+        .ab-cake {
+            position: relative;
+            z-index: 2;
+
+            font-size: clamp(70px, 10vw, 125px);
+
+            margin-bottom: 5px;
+
+            filter:
+                drop-shadow(0 8px 15px rgba(109,40,217,.18))
+                drop-shadow(0 0 25px rgba(245,158,11,.18));
+
+            animation:
+                abCakeBounce 1.4s ease-in-out infinite alternate,
+                abFadeUp 1s ease forwards;
+        }
+
+        /* =====================================================
+           MAIN TITLE
+        ===================================================== */
+
+        .ab-title {
+            position: relative;
+            z-index: 2;
+
+            font-size: clamp(38px, 7vw, 85px);
+            font-weight: 950;
+
+            line-height: 1.05;
+
+            margin: 10px 0;
+
+            letter-spacing: 2px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #5b21b6,
+                    #7c3aed,
+                    #d97706,
+                    #7c3aed,
+                    #5b21b6
+                );
+
+            background-size: 400%;
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            color: transparent;
+
+            animation:
+                abGradient 5s linear infinite,
+                abTitlePop 1s ease forwards .4s;
+        }
+
+        /* =====================================================
+           NAME
+        ===================================================== */
+
+        .ab-name {
+            position: relative;
+            z-index: 2;
+
+            font-size: clamp(32px, 5vw, 65px);
+            font-weight: 900;
+
+            margin: 8px 0 22px;
+
+            color: #6d28d9;
+
+            animation:
+                abNameGlow 2.5s ease-in-out infinite alternate,
+                abFadeUp 1s ease forwards .7s;
+        }
+
+        /* =====================================================
+           MESSAGE
+        ===================================================== */
+
+        .ab-message {
+            position: relative;
+            z-index: 2;
+
+            max-width: 900px;
+
+            font-size: clamp(17px, 2.4vw, 27px);
+            line-height: 1.55;
+
+            color: #3f3154;
+
+            opacity: 0;
+
+            animation:
+                abFadeUp 1.2s ease forwards 1s;
+        }
+
+        .ab-message strong {
+            color: #6d28d9;
+        }
+
+        /* =====================================================
+           WISH LINE
+        ===================================================== */
+
+        .ab-wish-line {
+            position: relative;
+            z-index: 2;
+
+            margin-top: 25px;
+
+            font-size: clamp(14px, 2vw, 20px);
+
+            color: #5b21b6;
+
+            font-weight: 600;
+
+            opacity: 0;
+
+            animation:
+                abFadeUp 1.2s ease forwards 1.3s;
+        }
+
+        /* =====================================================
+           CLOSE BUTTON
+        ===================================================== */
+
+        .ab-close {
+            position: absolute;
+
+            top: 22px;
+            right: 25px;
+
+            width: 48px;
+            height: 48px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(91,33,182,.2);
+
+            background:
+                rgba(255,255,255,.75);
+
+            color: #5b21b6;
+
+            font-size: 28px;
+            line-height: 1;
+
+            cursor: pointer;
+
+            pointer-events: auto;
+
+            box-shadow:
+                0 5px 20px rgba(91,33,182,.12);
+
+            backdrop-filter: blur(10px);
+
+            transition:
+                transform .3s ease,
+                background .3s ease,
+                box-shadow .3s ease;
+        }
+
+        .ab-close:hover {
+            transform:
+                rotate(90deg)
+                scale(1.12);
+
+            background:
+                #ffffff;
+
+            box-shadow:
+                0 8px 25px rgba(91,33,182,.22);
+        }
+
+        /* =====================================================
+           RAIN LAYER
+        ===================================================== */
+
+        .ab-rain {
+            position: absolute;
+            inset: 0;
+
+            overflow: hidden;
+
+            pointer-events: none;
+        }
+
+        /* =====================================================
+           WISH RAIN
+        ===================================================== */
+
+        .ab-wish {
+            position: absolute;
+
+            top: -80px;
+
+            white-space: nowrap;
+
+            font-size: 17px;
+            font-weight: 700;
+
+            color: #4c1d95;
+
+            text-shadow:
+                0 1px 2px rgba(255,255,255,.98),
+                0 2px 6px rgba(76,29,149,.16);
+
+            animation:
+                abRain linear forwards;
+
+            user-select: none;
+        }
+
+        /* =====================================================
+           BALLOONS
+        ===================================================== */
+
+        .ab-balloon {
+            position: absolute;
+
+            bottom: -150px;
+
+            font-size: 60px;
+
+            animation:
+                abBalloon linear forwards;
+
+            user-select: none;
+
+            filter:
+                drop-shadow(
+                    0 5px 7px rgba(0,0,0,.18)
+                );
+        }
+
+        /* =====================================================
+           CONFETTI
+        ===================================================== */
+
+        .ab-confetti {
+            position: absolute;
+
+            top: -30px;
+
+            width: 8px;
+            height: 15px;
+
+            border-radius: 2px;
+
+            animation:
+                abConfetti linear forwards;
+        }
+
+        /* =====================================================
+           SPARKLES
+        ===================================================== */
+
+        .ab-spark {
+            position: absolute;
+
+            font-size: 23px;
+
+            animation:
+                abSpark 2s ease-in-out infinite;
+
+            user-select: none;
+        }
+
+        /* =====================================================
+           ANIMATIONS
+        ===================================================== */
+
+        @keyframes abFadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes abTitlePop {
+            from {
+                transform: scale(.75);
+            }
+
+            to {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes abCakeBounce {
+            from {
+                transform:
+                    translateY(0)
+                    rotate(-2deg);
+            }
+
+            to {
+                transform:
+                    translateY(-15px)
+                    rotate(2deg);
+            }
+        }
+
+        @keyframes abGradient {
+            to {
+                background-position: 400%;
+            }
+        }
+
+        @keyframes abNameGlow {
+            from {
+                text-shadow:
+                    0 2px 8px rgba(109,40,217,.15);
+            }
+
+            to {
+                text-shadow:
+                    0 3px 15px rgba(109,40,217,.35),
+                    0 0 30px rgba(245,158,11,.18);
+            }
+        }
+
+        @keyframes abAmbientGlow {
+            from {
+                transform: scale(.85);
+                opacity: .6;
+            }
+
+            to {
+                transform: scale(1.15);
+                opacity: 1;
+            }
+        }
+
+        @keyframes abRain {
+
+            0% {
+                transform:
+                    translateY(0)
+                    rotate(-5deg);
+
+                opacity: 0;
+            }
+
+            10% {
+                opacity: .88;
+            }
+
+            85% {
+                opacity: .82;
+            }
+
+            100% {
+                transform:
+                    translateY(115vh)
+                    rotate(5deg);
+
+                opacity: 0;
+            }
+        }
+
+        @keyframes abBalloon {
+
+            0% {
+                transform:
+                    translateY(0)
+                    translateX(0)
+                    rotate(-8deg);
+
+                opacity: 0;
+            }
+
+            10% {
+                opacity: .8;
+            }
+
+            50% {
+                transform:
+                    translateY(-60vh)
+                    translateX(40px)
+                    rotate(8deg);
+            }
+
+            100% {
+                transform:
+                    translateY(-125vh)
+                    translateX(-30px)
+                    rotate(-8deg);
+
+                opacity: 0;
+            }
+        }
+
+        @keyframes abConfetti {
+
+            0% {
+                transform:
+                    translateY(0)
+                    rotate(0deg);
+
+                opacity: 1;
+            }
+
+            100% {
+                transform:
+                    translateY(115vh)
+                    rotate(720deg);
+
+                opacity: 0;
+            }
+        }
+
+        @keyframes abSpark {
+
+            0%, 100% {
+                transform: scale(.5);
+                opacity: .15;
+            }
+
+            50% {
+                transform: scale(1.4);
+                opacity: .8;
+            }
+        }
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 600px) {
+
+            .ab-welcome {
+                padding: 20px;
+            }
+
+            .ab-company {
+                letter-spacing: 1px;
+            }
+
+            .ab-message {
+                font-size: 16px;
+            }
+
+            .ab-wish-line {
+                font-size: 13px;
+                line-height: 1.8;
+            }
+
+            .ab-close {
+                top: 15px;
+                right: 15px;
+            }
+        }
+    </style>
+
+    <!-- ============================================
+         FULL SCREEN BIRTHDAY SURPRISE
+    ============================================= -->
+
+    <div class="ab-welcome">
+
+        <button
+            class="ab-close"
+            aria-label="Close birthday celebration">
+            ×
+        </button>
+
+        <div class="ab-company">
+            Ardon Technology Services Private Limited
+        </div>
+
+        <div class="ab-cake">
+            🎂
+        </div>
+
+        <div class="ab-title">
+            🎉 HAPPY BIRTHDAY 🎉
+        </div>
+
+        <div class="ab-name">
+            Roland Sir ❤️
+        </div>
+
+        <div class="ab-message">
+
+            Wishing you a wonderful birthday filled with
+            <strong>
+                happiness, success, good health
+            </strong>
+            and countless memorable moments! ✨
+
+            <br><br>
+
+            Thank you for inspiring and leading us.
+            🙏
+
+        </div>
+
+        <div class="ab-wish-line">
+
+            🎈 More Success
+            &nbsp; • &nbsp;
+
+            🌟 More Achievements
+            &nbsp; • &nbsp;
+
+            ❤️ Happiness
+            &nbsp; • &nbsp;
+
+            🚀 Bigger Dreams
+
+        </div>
+
+    </div>
+
+    <!-- ============================================
+         TRANSPARENT ALL-DAY CELEBRATION
+    ============================================= -->
+
+    <div class="ab-rain"></div>
+    `;
+
+    document.body.appendChild(overlay);
+
+    const welcome =
+        overlay.querySelector(".ab-welcome");
+
+    const rain =
+        overlay.querySelector(".ab-rain");
+
+    /* =====================================================
+       WISHES
+    ===================================================== */
+
+    const wishes = [
+        "🎉 Happy Birthday Roland Sir!",
+        "🎂 Wishing you endless happiness!",
+        "🌟 Wishing you greater success!",
+        "🚀 Keep inspiring us!",
+        "❤️ Wishing you good health!",
+        "🏆 More achievements ahead!",
+        "🥳 Have an amazing year!",
+        "✨ Keep shining!",
+        "🎈 Cheers to another fantastic year!",
+        "💫 May all your dreams come true!",
+        "🌈 Wishing you happiness always!",
+        "👏 Thank you for inspiring us!",
+        "🎁 Have a wonderful birthday!",
+        "🔥 Here's to bigger achievements!",
+        "👑 Happy Birthday, Roland Sir!",
+        "💯 Wishing you an incredible year!",
+        "🌟 Keep leading, keep inspiring!",
+        "🎊 Have a fantastic birthday!",
+        "❤️ Lots of happiness and success!",
+        "🥂 Cheers to another amazing year!",
+        "🚀 Wishing you many more milestones!",
+        "🌟 May this year be your best one yet!",
+        "🎉 Celebrate big today!",
+        "💎 Wishing you continued success!",
+        "🙏 Thank you for your leadership!",
+        "🎂 Many happy returns of the day!",
+        "🥳 Enjoy your special day!",
+        "✨ Wishing you endless possibilities!",
+        "🏅 More milestones to celebrate!",
+        "❤️ Happiness today and always!",
+        "🌟 Happy Birthday Roland Sir!",
+        "🎈 Keep achieving great things!",
+        "💜 Wishing you a truly memorable birthday!"
+    ];
+
+    /* =====================================================
+       BALLOONS
+    ===================================================== */
+
+    const balloons = [
+        "🎈",
+        "🎈",
+        "🎈",
+        "🎈",
+        "🎈",
+        "🎈",
+        "🎈",
+        "🎈",
+        "🎈",
+        "🎈"
+    ];
+
+    /* =====================================================
+       WISH
+    ===================================================== */
+
+    function createWish() {
+
+        const el =
+            document.createElement("div");
+
+        el.className =
+            "ab-wish";
+
+        el.textContent =
+            wishes[
+                Math.floor(
+                    Math.random() *
+                    wishes.length
+                )
+            ];
+
+        el.style.left =
+            Math.random() * 92 + "%";
+
+        el.style.fontSize =
+            14 +
+            Math.random() * 9 +
+            "px";
+
+        el.style.animationDuration =
+            7 +
+            Math.random() * 7 +
+            "s";
+
+        rain.appendChild(el);
+
+        setTimeout(() => {
+            el.remove();
+        }, 15000);
+    }
+
+    /* =====================================================
+       BALLOON
+    ===================================================== */
+
+    function createBalloon() {
+
+        const el =
+            document.createElement("div");
+
+        el.className =
+            "ab-balloon";
+
+        el.textContent =
+            balloons[
+                Math.floor(
+                    Math.random() *
+                    balloons.length
+                )
+            ];
+
+        el.style.left =
+            Math.random() * 95 + "%";
+
+        el.style.fontSize =
+            45 +
+            Math.random() * 40 +
+            "px";
+
+        el.style.animationDuration =
+            9 +
+            Math.random() * 8 +
+            "s";
+
+        rain.appendChild(el);
+
+        setTimeout(() => {
+            el.remove();
+        }, 18000);
+    }
+
+    /* =====================================================
+       CONFETTI
+    ===================================================== */
+
+    function createConfetti() {
+
+        const el =
+            document.createElement("div");
+
+        el.className =
+            "ab-confetti";
+
+        const colors = [
+            "#7c3aed",
+            "#8b5cf6",
+            "#d97706",
+            "#f59e0b",
+            "#ec4899",
+            "#06b6d4",
+            "#10b981"
+        ];
+
+        el.style.left =
+            Math.random() * 100 + "%";
+
+        el.style.background =
+            colors[
+                Math.floor(
+                    Math.random() *
+                    colors.length
+                )
+            ];
+
+        el.style.animationDuration =
+            5 +
+            Math.random() * 6 +
+            "s";
+
+        el.style.transform =
+            `rotate(${Math.random() * 360}deg)`;
+
+        rain.appendChild(el);
+
+        setTimeout(() => {
+            el.remove();
+        }, 12000);
+    }
+
+    /* =====================================================
+       SPARKLE
+    ===================================================== */
+
+    function createSpark() {
+
+        const el =
+            document.createElement("div");
+
+        el.className =
+            "ab-spark";
+
+        el.textContent =
+            ["✨", "⭐", "💫", "🌟"][
+                Math.floor(
+                    Math.random() * 4
+                )
+            ];
+
+        el.style.left =
+            Math.random() * 100 + "%";
+
+        el.style.top =
+            Math.random() * 100 + "%";
+
+        rain.appendChild(el);
+
+        setTimeout(() => {
+            el.remove();
+        }, 5000);
+    }
+
+    /* =====================================================
+       BIG OPENING BURST
+    ===================================================== */
+
+    for (let i = 0; i < 120; i++) {
+        setTimeout(
+            createConfetti,
+            i * 12
+        );
+    }
+
+    for (let i = 0; i < 18; i++) {
+        setTimeout(
+            createBalloon,
+            i * 180
+        );
+    }
+
+    for (let i = 0; i < 35; i++) {
+        setTimeout(
+            createWish,
+            i * 100
+        );
+    }
+
+    for (let i = 0; i < 25; i++) {
+        createSpark();
+    }
+
+    /* =====================================================
+       CONTINUOUS CELEBRATION
+
+       Runs continuously until the page is refreshed.
+    ===================================================== */
+
+    const wishTimer =
+        setInterval(
+            createWish,
+            700
+        );
+
+    const balloonTimer =
+        setInterval(
+            createBalloon,
+            1700
+        );
+
+    const confettiTimer =
+        setInterval(
+            createConfetti,
+            400
+        );
+
+    const sparkTimer =
+        setInterval(
+            createSpark,
+            1800
+        );
+
+    /* =====================================================
+       CLOSE FULL SCREEN
+
+       IMPORTANT:
+       We intentionally DON'T remove the overlay.
+
+       Only the welcome screen disappears.
+
+       The rain continues over the real website.
+    ===================================================== */
+
+    overlay
+        .querySelector(".ab-close")
+        .addEventListener(
+            "click",
+            () => {
+
+                welcome.classList.add("hidden");
+
+            }
+        );
+
+})();
