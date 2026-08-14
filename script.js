@@ -1,3 +1,14 @@
+/* ==========================================================================
+   UNIVERSAL BIRTHDAY CELEBRATION — Browser Injection Script
+   Works on ANY website. Paste into DevTools console, a bookmarklet,
+   a Tampermonkey/Greasemonkey userscript, or a browser extension content script.
+
+   HOW TO USE
+   1. Edit the CONFIG block below (name, company, message, theme).
+   2. Paste the whole script into the browser console on any page, OR
+   3. Wrap it as a bookmarklet: javascript:(function(){ ...minified... })();
+   4. Or save as a Tampermonkey userscript with @match set to all sites
+   ========================================================================== */
 
 (() => {
   if (document.getElementById("bc-overlay-root")) return;
@@ -15,17 +26,104 @@
     // celebration modes to cycle: confetti | balloons | fireworks | hearts | stars
     effects: ["confetti", "balloons", "fireworks", "hearts"],
     playSound: true,
-    onceADay: false, // don't re-show if already celebrated today on this domain
-    autoCloseAfterMs: 0 // e.g. 15000 to auto-dismiss the welcome screen; 0 = never
+    onceADay: true, // don't re-run the celebration burst twice on the same calendar day
+    autoCloseAfterMs: 0, // e.g. 15000 to auto-dismiss the welcome screen; 0 = never
+
+    // ---- Countdown-to-midnight settings ----
+    // Set a fixed "YYYY-MM-DD" to only ever count down to/celebrate that one date.
+    // Leave null to recur every night: shows a countdown to the next midnight,
+    // then auto-celebrates as soon as the clock strikes 12, on every page it's injected into.
+    celebrationDate: null,
+    countdownLabel: "🎂 Birthday celebration begins in"
   };
   /* ====================================================================== */
 
   const STORAGE_KEY = "bc_last_shown_" + location.hostname;
-  if (CONFIG.onceADay) {
-    const last = localStorage.getItem(STORAGE_KEY);
-    const today = new Date().toDateString();
-    if (last === today) return;
-    localStorage.setItem(STORAGE_KEY, today);
+
+  function hasCelebratedToday() {
+    if (!CONFIG.onceADay) return false;
+    return localStorage.getItem(STORAGE_KEY) === new Date().toDateString();
+  }
+  function markCelebrated() {
+    if (CONFIG.onceADay) localStorage.setItem(STORAGE_KEY, new Date().toDateString());
+  }
+
+  // Resolve the target midnight we're counting down to.
+  function getTarget() {
+    if (CONFIG.celebrationDate) {
+      return new Date(CONFIG.celebrationDate + "T00:00:00");
+    }
+    const t = new Date();
+    t.setHours(24, 0, 0, 0); // rolls forward to the *next* midnight
+    return t;
+  }
+
+  const now0 = new Date();
+  const target = getTarget();
+
+  // If a fixed celebrationDate was set and it's fully in the past, do nothing.
+  if (CONFIG.celebrationDate && now0 > target && now0.toDateString() !== target.toDateString()) {
+    return;
+  }
+  // Already celebrated today — nothing more to do on this page load.
+  if (hasCelebratedToday()) return;
+
+  if (now0 >= target) {
+    startCelebration();
+  } else {
+    showCountdown(target);
+  }
+
+  /* ========================================================================
+     PHASE 1 — Lightweight countdown overlay (shown on every page until 12:00)
+     ======================================================================== */
+  function showCountdown(target) {
+    const cd = document.createElement("div");
+    cd.id = "bc-countdown-root";
+    cd.innerHTML = `
+      <style>
+        #bc-countdown-root{position:fixed;right:18px;bottom:18px;z-index:2147483646;
+          pointer-events:none;font-family:Arial,Helvetica,sans-serif;text-align:right;
+          animation:bcCdFade 1s ease}
+        #bc-countdown-root .bc-cd-label{font-size:13px;font-weight:700;letter-spacing:.5px;
+          color:rgba(91,33,182,.55);text-shadow:0 1px 2px rgba(255,255,255,.8);margin-bottom:2px}
+        #bc-countdown-root .bc-cd-time{font-size:clamp(28px,4vw,54px);font-weight:900;
+          color:rgba(91,33,182,.28);letter-spacing:2px;text-shadow:0 2px 10px rgba(255,255,255,.6);
+          font-variant-numeric:tabular-nums}
+        @keyframes bcCdFade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+        @media (max-width:600px){#bc-countdown-root{right:10px;bottom:10px}
+          #bc-countdown-root .bc-cd-label{font-size:10px}}
+      </style>
+      <div class="bc-cd-label">${CONFIG.countdownLabel}</div>
+      <div class="bc-cd-time">00:00:00</div>
+    `;
+    document.body.appendChild(cd);
+    const timeEl = cd.querySelector(".bc-cd-time");
+
+    function tick() {
+      const diff = target - new Date();
+      if (diff <= 0) {
+        clearInterval(timer);
+        cd.remove();
+        startCelebration();
+        return;
+      }
+      const h = Math.floor(diff / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+      timeEl.textContent =
+        String(h).padStart(2, "0") + ":" + String(m).padStart(2, "0") + ":" + String(s).padStart(2, "0");
+    }
+    tick();
+    const timer = setInterval(tick, 1000);
+  }
+
+  /* ========================================================================
+     PHASE 2 — Full celebration burst (runs once the countdown hits zero)
+     ======================================================================== */
+  function startCelebration() {
+    markCelebrated();
+    runCelebration();
   }
 
   /* --------------------- Adaptive theme detection ---------------------- */
@@ -41,6 +139,12 @@
       return { primary: "#7c3aed", accent: "#d97706" };
     }
   }
+  /* ======================================================================
+     Everything below only ever runs once startCelebration() is called —
+     either immediately (if we're already past the target) or when the
+     countdown above reaches zero.
+     ====================================================================== */
+  function runCelebration() {
   const theme = detectTheme();
   const PRIMARY = typeof theme === "string" ? "#7c3aed" : theme.primary;
   const ACCENT = typeof theme === "string" ? "#d97706" : theme.accent;
@@ -77,6 +181,10 @@
     .bc-message strong{color:${PRIMARY}}
     .bc-wish-line{max-width:900px;margin-top:14px;font-size:clamp(12px,1.7vw,18px);line-height:1.8;
       color:${PRIMARY};font-weight:600;opacity:0;animation:bcFadeUp 1.2s ease forwards 1.3s}
+    .bc-hint{margin-top:16px;padding:8px 18px;border-radius:999px;background:rgba(124,58,237,.1);
+      border:1px dashed rgba(124,58,237,.4);color:${PRIMARY};font-weight:700;font-size:clamp(12px,1.6vw,16px);
+      opacity:0;animation:bcFadeUp 1.2s ease forwards 1.6s,bcHintPulse 1.6s ease-in-out infinite 2.8s}
+    @keyframes bcHintPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
     .bc-close{position:absolute;top:20px;right:22px;width:46px;height:46px;display:flex;align-items:center;
       justify-content:center;border-radius:50%;border:1px solid rgba(91,33,182,.2);background:rgba(255,255,255,.82);
       color:${PRIMARY};font-size:27px;cursor:pointer;pointer-events:auto;box-shadow:0 5px 20px rgba(91,33,182,.12);
@@ -117,6 +225,7 @@
     <div class="bc-name">${CONFIG.name} ❤️</div>
     <div class="bc-message">${CONFIG.message}</div>
     <div class="bc-wish-line">${CONFIG.footerTags.join(" &nbsp;•&nbsp; ")}</div>
+    <div class="bc-hint">🎈 Psst… tap the floating balloons to pop them! 🎉</div>
   </div>
   <div class="bc-rain"></div>
   <canvas class="bc-canvas"></canvas>
@@ -309,4 +418,5 @@
     root.remove();
     delete window.stopBirthdayCelebration;
   };
+  } // end runCelebration()
 })();
