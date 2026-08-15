@@ -218,7 +218,7 @@
     @media (prefers-reduced-motion:reduce){.bc-welcome *,.bc-rain *{animation-duration:.01ms!important;animation-iteration-count:1!important}}
   </style>
 
-  <div class="bc-welcome">
+  <!-- <div class="bc-welcome">
     <button class="bc-mute" aria-label="Toggle sound">${CONFIG.playSound ? "🔊" : "🔇"}</button>
     <button class="bc-close" aria-label="Close">×</button>
     ${CONFIG.logoUrl ? `<img class="bc-logo" src="${CONFIG.logoUrl}" alt="logo">` : ""}
@@ -229,7 +229,7 @@
     <div class="bc-message">${CONFIG.message}</div>
     <div class="bc-wish-line">${CONFIG.footerTags.join(" &nbsp;•&nbsp; ")}</div>
     <div class="bc-hint">🎈 Psst… tap the floating balloons to pop them! 🎉</div>
-  </div>
+  </div>  -->
   <div class="bc-rain"></div>
   <canvas class="bc-canvas"></canvas>
   `;
